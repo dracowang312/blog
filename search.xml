@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>JavaScript</title>
+    <url>/2024/02/29/JavaScript/</url>
+    <content><![CDATA[<p>JavaScript（通常缩写为JS）是一门基于原型和头等函数的多范式高级解释型编程语言，它支持面向对象程序设计、指令式编程和函数式编程。</p>
+<span id="more"></span>
+<h2 id="JavaScript基础与变量"><a href="#JavaScript基础与变量" class="headerlink" title="JavaScript基础与变量"></a>JavaScript基础与变量</h2><h3 id="JavaScript简介"><a href="#JavaScript简介" class="headerlink" title="JavaScript简介"></a>JavaScript简介</h3><p>Jvascript是一个脚本语言<br>ECMAScript是JavaScript的规范</p>
+<h3 id="JavaScript语句-标识符"><a href="#JavaScript语句-标识符" class="headerlink" title="JavaScript语句_标识符"></a>JavaScript语句_标识符</h3><p>Javascript的单位是行，语句以分号结尾，分号结束代表语句结束<br>标识符:由美元符号（$），数字，字母，下划线组成，数字不能作为开头<br>标识符不要有中文，不规范<br>javascript保留关键字:有一些关键字不能作为标识符，会报错。</p>
+<h3 id="JavaScript引入到HTML文件中"><a href="#JavaScript引入到HTML文件中" class="headerlink" title="JavaScript引入到HTML文件中"></a>JavaScript引入到HTML文件中</h3><p>var定义一个变量,const定义一个变量<br>var定义的值可以被改变,const定义的值不能被改变</p>
+<h3 id="JavaScript注释与常见输出方式"><a href="#JavaScript注释与常见输出方式" class="headerlink" title="JavaScript注释与常见输出方式"></a>JavaScript注释与常见输出方式</h3><p>1.嵌入HTML文件中2.引用本地文件3.引用网络文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;script src=&quot;./example.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>引用本地文件建议放在<code>&lt;body&gt;</code>结构的下面<br>引用网络文件放在<code>&lt;head&gt;</code>中</p>
+<h2 id="运算符-数据类型和流程循环语句"><a href="#运算符-数据类型和流程循环语句" class="headerlink" title="运算符_数据类型和流程循环语句"></a>运算符_数据类型和流程循环语句</h2><h3 id="JavaScript数据类型"><a href="#JavaScript数据类型" class="headerlink" title="JavaScript数据类型"></a>JavaScript数据类型</h3><p><strong>注释；单行注释，多行注释</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 单行注释</span><br><span class="line">/*</span><br><span class="line">多行注释</span><br><span class="line">多行注释2</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<p><strong>输出方式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alert(&quot;要输出的内容&quot;);</span><br><span class="line">console.log(&quot;要输出的内容&quot;);</span><br><span class="line">document.write(&quot;要输出的内容&quot;);</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript关键字typeof运算符"><a href="#JavaScript关键字typeof运算符" class="headerlink" title="JavaScript关键字typeof运算符"></a>JavaScript关键字typeof运算符</h3><p>1.字符串(string)2.数值(number)3.布尔值(boolean)4.对象(object)5.null6.undefined<br>null和undefined区别null强调定义的值为空；undefined强调值未被定义<br><strong>对象</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var userinfo = &#123;name:&quot;张三&quot;, age:&quot;12&quot;&#125;;</span><br></pre></td></tr></table></figure>
+<p>健值对的对应关系</p>
+<h3 id="JavaScript算数运算符之加法运算符"><a href="#JavaScript算数运算符之加法运算符" class="headerlink" title="JavaScript算数运算符之加法运算符"></a>JavaScript算数运算符之加法运算符</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var age = 13</span><br><span class="line">console.log(typeof age)</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript运算符之算数运算符"><a href="#JavaScript运算符之算数运算符" class="headerlink" title="JavaScript运算符之算数运算符"></a>JavaScript运算符之算数运算符</h3><p>数值相加为数值，<br>数值和字符串相加为字符串，<br>布尔值与数值相加为数值（ture为1，false为0）</p>
+<h3 id="JavaScript运算符之赋值运算符"><a href="#JavaScript运算符之赋值运算符" class="headerlink" title="JavaScript运算符之赋值运算符"></a>JavaScript运算符之赋值运算符</h3><p><code>+ - * / ++ -- %</code><br>自增和自减运算符，放在变量之后，会先返回变量操作前的值，再进行自增&#x2F;自减操作；放在变量之前，会先进行自增&#x2F;自减操作，再返回变量操作后的值。</p>
+<h3 id="JavaScript运算符之比较运算符"><a href="#JavaScript运算符之比较运算符" class="headerlink" title="JavaScript运算符之比较运算符"></a>JavaScript运算符之比较运算符</h3><p><code>= += -+ *= /= %=</code></p>
+<h3 id="JavaScript运算符之布尔运算符"><a href="#JavaScript运算符之布尔运算符" class="headerlink" title="JavaScript运算符之布尔运算符"></a>JavaScript运算符之布尔运算符</h3><p><code>&gt; &lt; &gt;= &lt;= == === != !==</code><br><strong>&#x3D;&#x3D; &#x3D;&#x3D;&#x3D;区别</strong><br>&#x3D;&#x3D;是比较值是否相等<br> &#x3D;&#x3D;&#x3D;不仅比较值还比较数据类型是否相等</p>
+<h3 id="JavaScript运算符之位运算符"><a href="#JavaScript运算符之位运算符" class="headerlink" title="JavaScript运算符之位运算符"></a>JavaScript运算符之位运算符</h3><p><strong>!(区反运算符)</strong><br>undefined;null;false;0;NaN;空字符串(“”)取反为ture，其他的为false<br><strong>&amp;&amp;(且运算符)</strong><br><code>consoleI(1 &lt; 2 &amp;&amp; 8 &gt; 9) //fslse</code><br><strong>||(或运算符)</strong><br><code>console(1 &lt; 2 || 8 &gt;9 ) //true</code></p>
+<h3 id="JavaScript运算符优先级"><a href="#JavaScript运算符优先级" class="headerlink" title="JavaScript运算符优先级"></a>JavaScript运算符优先级</h3><p><code>&lt;&lt;左移 &gt;&gt;右移</code></p>
+<h3 id="JavaScript类型转换"><a href="#JavaScript类型转换" class="headerlink" title="JavaScript类型转换"></a>JavaScript类型转换</h3><table><thead><tr><th><span>运算符</span></th><th><span>描述</span></th></tr></thead><tbody><tr><td><span>. [] ()</span></td><td><span>字段访问、数组下标、函数调用以及表达式分组</span></td></tr><tr><td><span>++ -- - ~ !  typeof</span></td><td><span>一元运算符、返回数据类型、对象创建、未定义值</span></td></tr><tr><td><span>/ * %</span></td><td><span>乘法、除法、取模</span></td></tr><tr><td><span>+ - +</span></td><td><span>加法、减法、字符串连接</span></td></tr><tr><td><span>&lt;&lt; &gt;&gt; &gt;&gt;&gt;</span></td><td><span>移位</span></td></tr><tr><td><span>&lt; &lt;= &gt; &gt;=</span></td><td><span>小于、小于等于、大于、大于等于、instanceof</span></td></tr><tr><td><span>== != === !==</span></td><td><span>等于、不等于、严格相等、非严格相等</span></td></tr><tr><td><span>&amp;&amp;</span></td><td><span>逻辑与</span></td></tr><tr><td><span>|</span><span>|</span></td><td><span>逻辑或</span></td></tr><tr><td><span>?:</span></td><td><span>三元运算符</span></td></tr></tbody></table>
+1.用（）2.分离开来，写成多条语句
+
+<h3 id="JavaScript条件语句之if语句"><a href="#JavaScript条件语句之if语句" class="headerlink" title="JavaScript条件语句之if语句"></a>JavaScript条件语句之if语句</h3><p><strong>自动转换</strong><br>1.不同类型的数据相互运算2.对非布尔值类型的数据求布尔值<br><strong>强制转换</strong><br>强制转换主要指使用Number、String和Boolean三个函数，手动将各种类型的值，分布转换成数字、字符串或者布尔值。<br><strong>number</strong><br>把任意类型转换成数字类型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//字符串</span><br><span class="line">Numbe(&quot;123&quot;) //123</span><br><span class="line">Number(&quot;adb123&quot;) //NaN</span><br><span class="line">Number(&quot;&quot;) //0</span><br><span class="line">Number(true) //1</span><br><span class="line">Number(false) // 0</span><br></pre></td></tr></table></figure>
+<p><strong>String</strong><br>把任意类型转成字符串类型<br><strong>Boolean</strong><br>把任意类型转成字符串类型<br>除了五个值为true其余都为flase<br>1.NaN;2.null;3.undefined;4.数值0；5.空字符串</p>
+<h3 id="JavaScript条件语句之if…else"><a href="#JavaScript条件语句之if…else" class="headerlink" title="JavaScript条件语句之if…else. ."></a>JavaScript条件语句之if…else. .</h3><p>num和10的大小</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var num = 5</span><br><span class="line">if(num &gt; 10)&#123;console.log(num + &quot;大于10&quot;)&#125;</span><br><span class="line">else console.log(num + &#x27;&#x27;&lt;=10&#x27;&#x27;)</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-if…else实操-1"><a href="#JavaScript-if…else实操-1" class="headerlink" title="JavaScript_if…else实操_1"></a>JavaScript_if…else实操_1</h3><h3 id="JavaScript-if…else实操-1-1"><a href="#JavaScript-if…else实操-1-1" class="headerlink" title="JavaScript_if…else实操_1"></a>JavaScript_if…else实操_1</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var num1 = 4</span><br><span class="line">var num2 = 4</span><br><span class="line">if(num1 &gt; num2)&#123;console.log(&quot;1&gt;2&quot;)&#125;</span><br><span class="line">else if(num1 &lt; num2)&#123;console.log(&quot;2&gt;1&quot;)&#125;</span><br><span class="line">else console.log(&quot;相等&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-if…else实操-2"><a href="#JavaScript-if…else实操-2" class="headerlink" title="JavaScript_if…else实操_2"></a>JavaScript_if…else实操_2</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var num3 = 678</span><br><span class="line">if(num3 % 2 == 1)&#123;console.log(&quot;奇数&quot;)&#125;</span><br><span class="line">    else console.log(&quot;偶数&quot;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">year = 4000</span><br><span class="line">if(year % 4 == 0 &amp;&amp; year %100 !== 0 &amp;&amp; year %400 !== 0)&#123;conslo.log(&quot;闰年&quot;)&#125;</span><br><span class="line">    else console.log(&quot;平年&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript条件语句之Switch语句"><a href="#JavaScript条件语句之Switch语句" class="headerlink" title="JavaScript条件语句之Switch语句"></a>JavaScript条件语句之Switch语句</h3><p>空调模式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var mode</span><br><span class="line">mode = &quot;cold&quot;</span><br><span class="line">switch (mode) &#123;</span><br><span class="line">    case &quot;heating&quot;:</span><br><span class="line">        console.log(&quot;制热&quot;)</span><br><span class="line">        break</span><br><span class="line">    case &quot;cold&quot;:</span><br><span class="line">        console.log(&quot;制冷&quot;)</span><br><span class="line">        break</span><br><span class="line">    case &quot;dry&quot;:</span><br><span class="line">        console.log(&quot;干燥&quot;)</span><br><span class="line">        break</span><br><span class="line">    case &quot;fan&quot;:</span><br><span class="line">        console.log(&quot;风扇&quot;)</span><br><span class="line">        break</span><br><span class="line">    default:</span><br><span class="line">        console.log(&quot;信息错误&quot;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>switch的比较是三等的比较</p>
+<h3 id="JavaScript-Switch的实操"><a href="#JavaScript-Switch的实操" class="headerlink" title="JavaScript_Switch的实操"></a>JavaScript_Switch的实操</h3><p>判断每个月有几天</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var year = 2012</span><br><span class="line">var mon = 2</span><br><span class="line">switch(mon)&#123;</span><br><span class="line">    case 1: case 3:case 5:case 7:case 8:case 10:case 12:</span><br><span class="line">    console.log(mon + &quot;月有31天&quot;)</span><br><span class="line">    break</span><br><span class="line">    case 4: case 6: case 9: case 11:</span><br><span class="line">    console.log(mon + &quot;月有30天&quot;)</span><br><span class="line">    break</span><br><span class="line">    case 2:if(year %4 == 0 &amp;&amp; year % 100 != 0 &amp;&amp; year % 400 != 0)</span><br><span class="line">    &#123;console.log(mon + &quot;月有28天&quot;)&#125;</span><br><span class="line">    else console.log(mon + &quot;月有29天&quot;)</span><br><span class="line">    break</span><br><span class="line">    default: console.log(&quot;信息有误&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Javascript三元运算符"><a href="#Javascript三元运算符" class="headerlink" title="Javascript三元运算符"></a>Javascript三元运算符</h3><p>有三个运算子</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var num = 143</span><br><span class="line">if(num % 2 == 0)&#123;console.log(&quot;偶数&quot;)&#125;</span><br><span class="line">else console.log(&quot;奇数&quot;)</span><br><span class="line"></span><br><span class="line">var num2 = 13</span><br><span class="line">console.log(num2 % 2 ? &quot;偶数&quot; : &quot;奇数&quot;)</span><br></pre></td></tr></table></figure>
+<p>三元运算符可以看作是if语句的简写形式</p>
+<h3 id="JavaScrtipt循环语句之for"><a href="#JavaScrtipt循环语句之for" class="headerlink" title="JavaScrtipt循环语句之for"></a>JavaScrtipt循环语句之for</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for (初始化表达式; 条件; 迭代因子) &#123;</span><br><span class="line">    语句&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>初始化表达式（initialize）：确定循环变量的初始值，只在循环开始时执行一次。</li>
+<li>布尔表达式（test）：每轮循环开始时，都要执行这个条件表达式，只有值为真，才继续进行循环。</li>
+<li>迭代因子（increment）：每轮循环的最后一个操作，通常用来递增循环变量。</li>
+</ul>
+<p><strong>三个表达式全部省略会出现死循环</strong></p>
+<h3 id="JavaScript-for循环实操1"><a href="#JavaScript-for循环实操1" class="headerlink" title="JavaScript_for循环实操1"></a>JavaScript_for循环实操1</h3><h3 id="JavaScript-for循环实操2"><a href="#JavaScript-for循环实操2" class="headerlink" title="JavaScript_for循环实操2"></a>JavaScript_for循环实操2</h3><p>九九乘法表</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for(var i=1;i&lt;=9;i++)&#123;document.write(&quot;&lt;br&gt;&quot;)</span><br><span class="line">    for(var j=1;j&lt;=i;j++)</span><br><span class="line">    &#123;document.write(i+&quot;*&quot;+j+&quot;=&quot;+j*i+&quot; &quot;)&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript-循环语句之while"><a href="#JavaScript-循环语句之while" class="headerlink" title="JavaScript_循环语句之while"></a>JavaScript_循环语句之while</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">while (条件) &#123;</span><br><span class="line"> 语句;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>for循环都可以用while循环代替，但是for循环更清晰</p>
+<h3 id="JavaScript-循环语句之do…while"><a href="#JavaScript-循环语句之do…while" class="headerlink" title="JavaScript_循环语句之do…while"></a>JavaScript_循环语句之do…while</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">do &#123;</span><br><span class="line"> 语句</span><br><span class="line">&#125; while (条件);</span><br></pre></td></tr></table></figure>
+<p>和while的区别是先执行一次再循环</p>
+<h3 id="JavaScript-break语句和continue语句"><a href="#JavaScript-break语句和continue语句" class="headerlink" title="JavaScript_break语句和continue语句"></a>JavaScript_break语句和continue语句</h3><p>break的作用是跳出循环<br>cintinue的作用是立即停止本轮循环，返回循环结构的头部，开始下一轮循环。</p>
+<h2 id="字符串与数组"><a href="#字符串与数组" class="headerlink" title="字符串与数组"></a>字符串与数组</h2><h3 id="JavaScript-字符串"><a href="#JavaScript-字符串" class="headerlink" title="JavaScript_字符串"></a>JavaScript_字符串</h3><p>字符串是0个或多个排在一起的字符组成，放在单引号双引号中<br>单引号内部可以用双引号，双引号内部可以用单引号<br>双引号嵌套双引号，单引号嵌套单引号是不行的。<br>除非在引号前面加上反斜杠（转义）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var hello=&quot;say :\&quot;hello\&quot;&quot;</span><br><span class="line">console.log(&quot;hello&quot;)</span><br></pre></td></tr></table></figure>
+<p>字符串默认在一行，多行会报错，可以用转义，但是会有空格问题，建议用+号<br><strong>转义</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\0 ：null（\u0000） </span><br><span class="line">\b ：后退键（\u0008） </span><br><span class="line">\f ：换页符（\u000C） </span><br><span class="line">\n ：换行符（\u000A） </span><br><span class="line">\r ：回车键（\u000D） </span><br><span class="line">\t ：制表符（\u0009） </span><br><span class="line">\v ：垂直制表符（\u000B） </span><br><span class="line">&#x27; ：单引号（\u0027） </span><br><span class="line">&quot; ：双引号（\u0022） </span><br><span class="line">\ ：反斜杠（\u005C）</span><br></pre></td></tr></table></figure>
+<p><strong>length 属性</strong><br>length属性返回字符串的长度，该属性是无法被改变的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var s=&quot;example&quot;</span><br><span class="line">s.length </span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-字符串转码"><a href="#JavaScript-字符串转码" class="headerlink" title="JavaScript_字符串转码"></a>JavaScript_字符串转码</h3><p><strong>Base64转码</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">btoa(&quot;example&quot;)任意值转成Base64</span><br><span class="line">otab(&quot;example&quot;)Base64转成任意值</span><br></pre></td></tr></table></figure>
+<p>中文不能直接转码<br>除非用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">encodeURIComponent(&quot;example&quot;) 转码</span><br><span class="line">decodeURIComponent(&quot;example&quot;) 解码</span><br></pre></td></tr></table></figure>
+<h3 id="转义字符JavaScript-字符串方法-charAt"><a href="#转义字符JavaScript-字符串方法-charAt" class="headerlink" title="转义字符JavaScript_字符串方法_charAt()"></a>转义字符JavaScript_字符串方法_charAt()</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var name=example</span><br><span class="line">name.charAt(2) //a</span><br></pre></td></tr></table></figure>
+<p>charAt方法返回指定位置的字符，参数是从0开始编号的<br>如果参数为负数，或大于等于字符串的长度，charAt返回空字符串</p>
+<h3 id="JavaScript-字符串方法-concat"><a href="#JavaScript-字符串方法-concat" class="headerlink" title="JavaScript_字符串方法_concat()"></a>JavaScript_字符串方法_concat()</h3><p>concat方法：用来连接两个字符串，不改变原字符串<br>用+一样，数值例外</p>
+<h3 id="JavaScript-字符串方法-slice"><a href="#JavaScript-字符串方法-slice" class="headerlink" title="JavaScript_字符串方法_slice()"></a>JavaScript_字符串方法_slice()</h3><p>slice方法用于从原字符串取出字符并返回，不改变原字符串，第一个参数是起始位置，第二个参数是终止位置（不包含该位置）。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var name=&quot;example&quot;</span><br><span class="line">name.slice(0,4) //&quot;eamp&quot;</span><br></pre></td></tr></table></figure>
+<p>如果只有一个参数，代表从起始位置，到原字符串结束。<br>如果参数为负值，代表从结尾倒数计算位置(-1指字符串的最后一位)<br>如果第二个参数大于第一个参数，返回一个空字符串</p>
+<h3 id="JavaScript-字符串方法-substring"><a href="#JavaScript-字符串方法-substring" class="headerlink" title="JavaScript_字符串方法_substring()"></a>JavaScript_字符串方法_substring()</h3><p>和slice不一样的是，如果第二个参数小于第一个参数，会自动更换参数的位置。<br>如果参数是负数，substring会把负数转为0<br>这些规则违反直觉，日常不建议用substring方法。</p>
+<h3 id="JavaScript-字符串方法-substr"><a href="#JavaScript-字符串方法-substr" class="headerlink" title="JavaScript_字符串方法_substr()"></a>JavaScript_字符串方法_substr()</h3><p>substr第一个参数为子字符串的起始位置，第二个位置为子字符串的长度。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var name=&quot;example&quot;</span><br><span class="line">name.substr(0,2) //&quot;ex&quot;</span><br></pre></td></tr></table></figure>
+<p>如果省略第二个参数，表示子字符串到原字符串的结束<br>如果第一个字符串为负数，则倒着计算字符位置<br>如果第二个参数是负数，将被自动转换成0，返回空字符串。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;example&quot;.substr(-3,2) //&quot;pl&quot;</span><br><span class="line">&quot;example&quot;.substr(2,-1) //&quot;0&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript-字符串方法-indexOf-lastIndexOf"><a href="#JavaScript-字符串方法-indexOf-lastIndexOf" class="headerlink" title="JavaScript_字符串方法_indexOf()_lastIndexOf()"></a>JavaScript_字符串方法_indexOf()_lastIndexOf()</h3><p>indexOf方法用于确定一个字符串在另一个字符串中第一次出现的位置，返回结果是匹配开始的位置。如果返回-1，就表示不匹配</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;hahaha&quot;.indexof(&quot;ha&quot;) // 0</span><br></pre></td></tr></table></figure>
+<p>indexOf方法还可以接受第二个参数，表示从该位置开始向后匹配\</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">console.log(&quot;hahaha&quot;.indexOf(&quot;ha&quot;,1)) // 2</span><br></pre></td></tr></table></figure>
+<p>lastindexOf,是从胃部开始匹配</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">console.log(&quot;hahaha&quot;.lastindexOf(&quot;ha&quot;)) // 4</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-字符串方法-trim"><a href="#JavaScript-字符串方法-trim" class="headerlink" title="JavaScript_字符串方法_trim()"></a>JavaScript_字符串方法_trim()</h3><p>trim方法用于去除字符串两端的空格，返回一个新字符串，不改变原字符串<br>该方法去除的不仅是空格，还包括制表符（\t、\v）、换行符（\n）和回车符（\r）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot; hello world &quot;.trim() //&quot;hello world&quot;</span><br></pre></td></tr></table></figure>
+<p>ES6扩展方法，trimEnd()和trimStart()方法,分别是去除尾部的空格和去除头部的空格</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot; hello world &quot;.trimEnd() //&quot; hello world&quot;</span><br><span class="line">&quot; hello world &quot;trimStart() //&quot;hello world &quot;</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-字符串方法-toLowerCase-toUpperCase"><a href="#JavaScript-字符串方法-toLowerCase-toUpperCase" class="headerlink" title="JavaScript_字符串方法_toLowerCase()_toUpperCase()"></a>JavaScript_字符串方法_toLowerCase()_toUpperCase()</h3><p>toLowerCase()把字符串全部改为小写<br>toUpperCase()把字符串全部改为大写</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;Hello world&quot;.toLowerCase() //&quot;hello world&quot;</span><br></pre></td></tr></table></figure>
+<p>将字符串首字母大写,其他小写</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">console.log(&quot;naMe&quot;.charAt(0).toUpperCase()+&quot;naMe&quot;.substr(1).toLowerCase())</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript-字符串方法-search-replace"><a href="#JavaScript-字符串方法-search-replace" class="headerlink" title="JavaScript_字符串方法_search()_replace()"></a>JavaScript_字符串方法_search()_replace()</h3><p>search方法确定原字符串是否匹配某个子字符串,返回值为匹配的第一个位置。如果没有找到匹配，则返回-1。<br>search和indexOf有区别，学到正则区别出来了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;hhhhhahaha&quot;.search(&quot;ha&quot;) //4</span><br></pre></td></tr></table></figure>
+<p>replace方法用于替换匹配的子字符串<br>console.log(“iloveyou”.replace(“love”,”hate”)) &#x2F;&#x2F;“ihateyou”</p>
+<h3 id="JavaScript-字符串方法-split"><a href="#JavaScript-字符串方法-split" class="headerlink" title="JavaScript_字符串方法_split()"></a>JavaScript_字符串方法_split()</h3><p>split按照规则分割字符串，返回一个由分割出来的字符串组成的数组。<br>“a|b|c”.split(“｜”) &#x2F;&#x2F;[“a”,”b”,”b”]<br>如果分割规则为空字符串，则返回数组的成员是原字符串的每一个字符。<br>“a|b|c”.split(“”) &#x2F;&#x2F;[“a”,”|”b”,”|”,”c”]<br>如果省略参数，则返回原字符串<br>split还接受第二个参数，限定返回数组的最大成员数<br>“a|b|c”.split(“|”,2) &#x2F;&#x2F;[“a”,”b”]</p>
+<h3 id="JavaScript-数组"><a href="#JavaScript-数组" class="headerlink" title="JavaScript_数组"></a>JavaScript_数组</h3><p>数组（array）是按次序排列的一组值，每个值的位置都有编号（从0开始</p>
+<h3 id="JavaScript-数组的遍历"><a href="#JavaScript-数组的遍历" class="headerlink" title="JavaScript_数组的遍历"></a>JavaScript_数组的遍历</h3><h3 id="JavaScript-数组构造函数"><a href="#JavaScript-数组构造函数" class="headerlink" title="JavaScript_数组构造函数"></a>JavaScript_数组构造函数</h3><h3 id="JavaScript-数组静态方法-Array-isArray"><a href="#JavaScript-数组静态方法-Array-isArray" class="headerlink" title="JavaScript_数组静态方法_Array.isArray()"></a>JavaScript_数组静态方法_Array.isArray()</h3><h3 id="JavaScript-数组方法-push-pop"><a href="#JavaScript-数组方法-push-pop" class="headerlink" title="JavaScript_数组方法_push()_pop()"></a>JavaScript_数组方法_push()_pop()</h3><h3 id="JavaScript-数组方法-shift-unshift"><a href="#JavaScript-数组方法-shift-unshift" class="headerlink" title="JavaScript_数组方法_shift()_unshift()"></a>JavaScript_数组方法_shift()_unshift()</h3><h3 id="JavaScript-数组方法-join"><a href="#JavaScript-数组方法-join" class="headerlink" title="JavaScript_数组方法_join()"></a>JavaScript_数组方法_join()</h3><h3 id="JavaScript-数组方法-concat"><a href="#JavaScript-数组方法-concat" class="headerlink" title="JavaScript_数组方法_concat()"></a>JavaScript_数组方法_concat()</h3><h3 id="JavaScript-数组方法-reverse"><a href="#JavaScript-数组方法-reverse" class="headerlink" title="JavaScript_数组方法_reverse()"></a>JavaScript_数组方法_reverse()</h3><h3 id="JavaScript-数组方法-slice"><a href="#JavaScript-数组方法-slice" class="headerlink" title="JavaScript_数组方法_slice()"></a>JavaScript_数组方法_slice()</h3><h3 id="JavaScript-数组方法-splice"><a href="#JavaScript-数组方法-splice" class="headerlink" title="JavaScript_数组方法_splice()"></a>JavaScript_数组方法_splice()</h3><h3 id="JavaScript-数组方法-sort"><a href="#JavaScript-数组方法-sort" class="headerlink" title="JavaScript_数组方法_sort()"></a>JavaScript_数组方法_sort()</h3><h3 id="JavaScript-数组方法-indexOf-lastIndexOf"><a href="#JavaScript-数组方法-indexOf-lastIndexOf" class="headerlink" title="JavaScript_数组方法_indexOf()_lastIndexOf"></a>JavaScript_数组方法_indexOf()_lastIndexOf</h3><h3 id="JavaScript-字符串数组实操-字符串反序-字符串变成驼峰命名"><a href="#JavaScript-字符串数组实操-字符串反序-字符串变成驼峰命名" class="headerlink" title="JavaScript_字符串数组实操_字符串反序_字符串变成驼峰命名"></a>JavaScript_字符串数组实操_字符串反序_字符串变成驼峰命名</h3><h3 id="JavaScript-字符串数组实操-二维数组转一维数组"><a href="#JavaScript-字符串数组实操-二维数组转一维数组" class="headerlink" title="JavaScript_字符串数组实操_二维数组转一维数组"></a>JavaScript_字符串数组实操_二维数组转一维数组</h3><h3 id="JavaScript-字符串数组实操-数组去重"><a href="#JavaScript-字符串数组实操-数组去重" class="headerlink" title="JavaScript_字符串数组实操_数组去重"></a>JavaScript_字符串数组实操_数组去重</h3><h3 id="JavaScript-字符串实操-数组排序"><a href="#JavaScript-字符串实操-数组排序" class="headerlink" title="JavaScript_字符串实操_数组排序"></a>JavaScript_字符串实操_数组排序</h3><h2 id="函数与对象"><a href="#函数与对象" class="headerlink" title="函数与对象"></a>函数与对象</h2><h3 id="JavaScript-函数概述"><a href="#JavaScript-函数概述" class="headerlink" title="JavaScript_函数概述"></a>JavaScript_函数概述</h3><h3 id="JavaScript-函数重复声明"><a href="#JavaScript-函数重复声明" class="headerlink" title="JavaScript_函数重复声明"></a>JavaScript_函数重复声明</h3><h3 id="JavaScript-函数名提升"><a href="#JavaScript-函数名提升" class="headerlink" title="JavaScript_函数名提升"></a>JavaScript_函数名提升</h3><h3 id="JavaScript-函数的属性和方法"><a href="#JavaScript-函数的属性和方法" class="headerlink" title="JavaScript_函数的属性和方法"></a>JavaScript_函数的属性和方法</h3><h3 id="JavaScript-函数作用域"><a href="#JavaScript-函数作用域" class="headerlink" title="JavaScript_函数作用域"></a>JavaScript_函数作用域</h3><h3 id="JavaScript-函数参数"><a href="#JavaScript-函数参数" class="headerlink" title="JavaScript_函数参数"></a>JavaScript_函数参数</h3><h3 id="JavaScript-函数返回值"><a href="#JavaScript-函数返回值" class="headerlink" title="JavaScript_函数返回值"></a>JavaScript_函数返回值</h3><h3 id="JavaScript-自执行函数"><a href="#JavaScript-自执行函数" class="headerlink" title="JavaScript_自执行函数"></a>JavaScript_自执行函数</h3><h3 id="JavaScript-函数应用"><a href="#JavaScript-函数应用" class="headerlink" title="JavaScript_函数应用"></a>JavaScript_函数应用</h3><h3 id="JavaScript-对象概述"><a href="#JavaScript-对象概述" class="headerlink" title="JavaScript_对象概述"></a>JavaScript_对象概述</h3><h3 id="JavaScript对象属性"><a href="#JavaScript对象属性" class="headerlink" title="JavaScript对象属性"></a>JavaScript对象属性</h3><h3 id="JavaScript-对象方法"><a href="#JavaScript-对象方法" class="headerlink" title="JavaScript_对象方法"></a>JavaScript_对象方法</h3><h3 id="JavaScript-函数应用注意事项"><a href="#JavaScript-函数应用注意事项" class="headerlink" title="JavaScript_ 函数应用注意事项"></a>JavaScript_ 函数应用注意事项</h3><h2 id="Math与Date"><a href="#Math与Date" class="headerlink" title="Math与Date"></a>Math与Date</h2><h3 id="JavaScript-Math对象-静态属性"><a href="#JavaScript-Math对象-静态属性" class="headerlink" title="JavaScript_Math对象_静态属性"></a>JavaScript_Math对象_静态属性</h3><h3 id="JavaScript-Math对象-静态方法一"><a href="#JavaScript-Math对象-静态方法一" class="headerlink" title="JavaScript_Math对象_静态方法一"></a>JavaScript_Math对象_静态方法一</h3><h3 id="JavaScript-Math对象-静态方法二"><a href="#JavaScript-Math对象-静态方法二" class="headerlink" title="JavaScript_Math对象_静态方法二"></a>JavaScript_Math对象_静态方法二</h3><h3 id="JavaScript-Math对象-静态方法三"><a href="#JavaScript-Math对象-静态方法三" class="headerlink" title="JavaScript_Math对象_静态方法三"></a>JavaScript_Math对象_静态方法三</h3><h3 id="JavaScript-Date对象"><a href="#JavaScript-Date对象" class="headerlink" title="JavaScript_Date对象"></a>JavaScript_Date对象</h3><h3 id="JavaScript-Date对象-静态方法"><a href="#JavaScript-Date对象-静态方法" class="headerlink" title="JavaScript_Date对象_静态方法"></a>JavaScript_Date对象_静态方法</h3><h3 id="JavaScript-Date对象-实例方法-to类"><a href="#JavaScript-Date对象-实例方法-to类" class="headerlink" title="JavaScript_Date对象_实例方法_to类"></a>JavaScript_Date对象_实例方法_to类</h3><h3 id="JavaScript-Date对象-实例方法-get类"><a href="#JavaScript-Date对象-实例方法-get类" class="headerlink" title="JavaScript_Date对象_实例方法_get类"></a>JavaScript_Date对象_实例方法_get类</h3><h3 id="JavaScript-Date对象-实例方法-set类"><a href="#JavaScript-Date对象-实例方法-set类" class="headerlink" title="JavaScript_Date对象_实例方法_set类"></a>JavaScript_Date对象_实例方法_set类</h3><h3 id="JavaScript-Math与Date实操1"><a href="#JavaScript-Math与Date实操1" class="headerlink" title="JavaScript_Math与Date实操1"></a>JavaScript_Math与Date实操1</h3><h3 id="JavaScript-Math与Date实操2"><a href="#JavaScript-Math与Date实操2" class="headerlink" title="JavaScript_Math与Date实操2"></a>JavaScript_Math与Date实操2</h3><h2 id="DOM模型"><a href="#DOM模型" class="headerlink" title="DOM模型"></a>DOM模型</h2><h3 id="JavaScript-DOM概述"><a href="#JavaScript-DOM概述" class="headerlink" title="JavaScript_DOM概述"></a>JavaScript_DOM概述</h3><h3 id="JavaScript-document对象-属性"><a href="#JavaScript-document对象-属性" class="headerlink" title="JavaScript_document对象_属性"></a>JavaScript_document对象_属性</h3><h3 id="JavaScript-document对象-方法-获取元素"><a href="#JavaScript-document对象-方法-获取元素" class="headerlink" title="JavaScript_document对象_方法_获取元素"></a>JavaScript_document对象_方法_获取元素</h3><h3 id="JavaScript-document对象-方法-创建元素"><a href="#JavaScript-document对象-方法-创建元素" class="headerlink" title="JavaScript_document对象_方法_创建元素"></a>JavaScript_document对象_方法_创建元素</h3><h3 id="JavaScript-Element对象-属性"><a href="#JavaScript-Element对象-属性" class="headerlink" title="JavaScript_Element对象_属性"></a>JavaScript_Element对象_属性</h3><h3 id="JavaScript-Element对象-获取元素位置一"><a href="#JavaScript-Element对象-获取元素位置一" class="headerlink" title="JavaScript_Element对象_获取元素位置一"></a>JavaScript_Element对象_获取元素位置一</h3><h3 id="JavaScript-Element对象-获取元素位置二"><a href="#JavaScript-Element对象-获取元素位置二" class="headerlink" title="JavaScript_Element对象_获取元素位置二"></a>JavaScript_Element对象_获取元素位置二</h3><h3 id="JavaScript-Element对象-方法"><a href="#JavaScript-Element对象-方法" class="headerlink" title="JavaScript_Element对象_方法"></a>JavaScript_Element对象_方法</h3><h3 id="JavaScript-Attribute属性的操作"><a href="#JavaScript-Attribute属性的操作" class="headerlink" title="JavaScript_Attribute属性的操作"></a>JavaScript_Attribute属性的操作</h3><h3 id="JavaScript-Text节点"><a href="#JavaScript-Text节点" class="headerlink" title="JavaScript_Text节点"></a>JavaScript_Text节点</h3><h3 id="JavaScript-DocumentFragment节点"><a href="#JavaScript-DocumentFragment节点" class="headerlink" title="JavaScript_DocumentFragment节点"></a>JavaScript_DocumentFragment节点</h3><h3 id="JavaScript-Node节点属性-nodeName"><a href="#JavaScript-Node节点属性-nodeName" class="headerlink" title="JavaScript_Node节点属性_nodeName"></a>JavaScript_Node节点属性_nodeName</h3><h3 id="JavaScript-Node节点属性-nodeValue"><a href="#JavaScript-Node节点属性-nodeValue" class="headerlink" title="JavaScript_Node节点属性_nodeValue"></a>JavaScript_Node节点属性_nodeValue</h3><h3 id="JavaScript-Node节点属性-textContent"><a href="#JavaScript-Node节点属性-textContent" class="headerlink" title="JavaScript_Node节点属性_textContent"></a>JavaScript_Node节点属性_textContent</h3><h3 id="JavaScript-Node节点属性-nextSibling"><a href="#JavaScript-Node节点属性-nextSibling" class="headerlink" title="JavaScript_Node节点属性_nextSibling"></a>JavaScript_Node节点属性_nextSibling</h3><h3 id="JavaScript-Node节点属性-previousSibling"><a href="#JavaScript-Node节点属性-previousSibling" class="headerlink" title="JavaScript_Node节点属性_previousSibling"></a>JavaScript_Node节点属性_previousSibling</h3><h3 id="JavaScript-Node节点属性-parentNode"><a href="#JavaScript-Node节点属性-parentNode" class="headerlink" title="JavaScript_Node节点属性_parentNode"></a>JavaScript_Node节点属性_parentNode</h3><h3 id="JavaScript-Node节点属性-firstChild-lastChild"><a href="#JavaScript-Node节点属性-firstChild-lastChild" class="headerlink" title="JavaScript_Node节点属性_firstChild_lastChild"></a>JavaScript_Node节点属性_firstChild_lastChild</h3><h3 id="JavaScript-Node节点属性-childNodes"><a href="#JavaScript-Node节点属性-childNodes" class="headerlink" title="JavaScript_Node节点属性_childNodes"></a>JavaScript_Node节点属性_childNodes</h3><h3 id="JavaScript-Node节点属性-appendChild"><a href="#JavaScript-Node节点属性-appendChild" class="headerlink" title="JavaScript_Node节点属性_appendChild"></a>JavaScript_Node节点属性_appendChild</h3><h3 id="JavaScript-Node节点方法-hasChildNodes"><a href="#JavaScript-Node节点方法-hasChildNodes" class="headerlink" title="JavaScript_Node节点方法_hasChildNodes"></a>JavaScript_Node节点方法_hasChildNodes</h3><h3 id="JavaScript-Node节点方法-cloneNode"><a href="#JavaScript-Node节点方法-cloneNode" class="headerlink" title="JavaScript_Node节点方法_cloneNode()"></a>JavaScript_Node节点方法_cloneNode()</h3><h3 id="JavaScript-Node节点方法-insertBefore"><a href="#JavaScript-Node节点方法-insertBefore" class="headerlink" title="JavaScript_Node节点方法_insertBefore()"></a>JavaScript_Node节点方法_insertBefore()</h3><h3 id="JavaScript-Node节点方法-removeChild"><a href="#JavaScript-Node节点方法-removeChild" class="headerlink" title="JavaScript_Node节点方法_removeChild()"></a>JavaScript_Node节点方法_removeChild()</h3><h3 id="JavaScript-Node节点方法-replaceChild"><a href="#JavaScript-Node节点方法-replaceChild" class="headerlink" title="JavaScript_Node节点方法_replaceChild()"></a>JavaScript_Node节点方法_replaceChild()</h3><h3 id="JavaScript-CSS操作"><a href="#JavaScript-CSS操作" class="headerlink" title="JavaScript_CSS操作"></a>JavaScript_CSS操作</h3><h3 id="JavaScript-事件处理程序"><a href="#JavaScript-事件处理程序" class="headerlink" title="JavaScript_事件处理程序"></a>JavaScript_事件处理程序</h3><h3 id="JavaScript-事件类型之鼠标事件"><a href="#JavaScript-事件类型之鼠标事件" class="headerlink" title="JavaScript_事件类型之鼠标事件"></a>JavaScript_事件类型之鼠标事件</h3><h3 id="JavaScript-事件流"><a href="#JavaScript-事件流" class="headerlink" title="JavaScript_事件流"></a>JavaScript_事件流</h3><h3 id="JavaScript-Event事件对象"><a href="#JavaScript-Event事件对象" class="headerlink" title="JavaScript_Event事件对象"></a>JavaScript_Event事件对象</h3><h3 id="JavaScript-事件类型之键盘事件"><a href="#JavaScript-事件类型之键盘事件" class="headerlink" title="JavaScript_事件类型之键盘事件"></a>JavaScript_事件类型之键盘事件</h3><h3 id="JavaScript-事件类型之表单事件"><a href="#JavaScript-事件类型之表单事件" class="headerlink" title="JavaScript_事件类型之表单事件"></a>JavaScript_事件类型之表单事件</h3><h3 id="JavaScript-事件类型之窗口事件"><a href="#JavaScript-事件类型之窗口事件" class="headerlink" title="JavaScript_事件类型之窗口事件"></a>JavaScript_事件类型之窗口事件</h3><h3 id="JavaScript-事件类型之焦点-剪切板事件"><a href="#JavaScript-事件类型之焦点-剪切板事件" class="headerlink" title="JavaScript_事件类型之焦点_剪切板事件"></a>JavaScript_事件类型之焦点_剪切板事件</h3><h3 id="JavaScript-网页状态事件"><a href="#JavaScript-网页状态事件" class="headerlink" title="JavaScript_网页状态事件"></a>JavaScript_网页状态事件</h3><h3 id="JavaScript-Touch事件"><a href="#JavaScript-Touch事件" class="headerlink" title="JavaScript_Touch事件"></a>JavaScript_Touch事件</h3><h3 id="JavaScript-事件代理-事件委托"><a href="#JavaScript-事件代理-事件委托" class="headerlink" title="JavaScript_事件代理(事件委托)"></a>JavaScript_事件代理(事件委托)</h3><h3 id="JavaScript-this关键字"><a href="#JavaScript-this关键字" class="headerlink" title="JavaScript_this关键字"></a>JavaScript_this关键字</h3><h3 id="JavaScript-函数-闭包概念"><a href="#JavaScript-函数-闭包概念" class="headerlink" title="JavaScript_函数_闭包概念"></a>JavaScript_函数_闭包概念</h3><h3 id="JavaScript-闭包特点"><a href="#JavaScript-闭包特点" class="headerlink" title="JavaScript_闭包特点"></a>JavaScript_闭包特点</h3><h3 id="JavaScript-闭包应用场景"><a href="#JavaScript-闭包应用场景" class="headerlink" title="JavaScript_闭包应用场景"></a>JavaScript_闭包应用场景</h3><h3 id="JavaScript-闭包中的this关键字"><a href="#JavaScript-闭包中的this关键字" class="headerlink" title="JavaScript_闭包中的this关键字"></a>JavaScript_闭包中的this关键字</h3><h3 id="JavaScript-DOM实操-Tab切换-上"><a href="#JavaScript-DOM实操-Tab切换-上" class="headerlink" title="JavaScript_DOM实操_Tab切换(上)"></a>JavaScript_DOM实操_Tab切换(上)</h3><h3 id="JavaScript-DOM实操-Tab切换-下"><a href="#JavaScript-DOM实操-Tab切换-下" class="headerlink" title="JavaScript_DOM实操_Tab切换(下)"></a>JavaScript_DOM实操_Tab切换(下)</h3><h3 id="JavaScript-DOM实操-瀑布流-页面布局"><a href="#JavaScript-DOM实操-瀑布流-页面布局" class="headerlink" title="JavaScript_DOM实操_瀑布流_页面布局"></a>JavaScript_DOM实操_瀑布流_页面布局</h3><h3 id="JavaScript-DOM实操-瀑布流-动态设置内容居中"><a href="#JavaScript-DOM实操-瀑布流-动态设置内容居中" class="headerlink" title="JavaScript_DOM实操_瀑布流_动态设置内容居中"></a>JavaScript_DOM实操_瀑布流_动态设置内容居中</h3><h3 id="JavaScript-DOM实操-瀑布流-动态设置图片位置"><a href="#JavaScript-DOM实操-瀑布流-动态设置图片位置" class="headerlink" title="JavaScript_DOM实操_瀑布流_动态设置图片位置"></a>JavaScript_DOM实操_瀑布流_动态设置图片位置</h3><h3 id="JavaScript-DOM实操-瀑布流-页面触底"><a href="#JavaScript-DOM实操-瀑布流-页面触底" class="headerlink" title="JavaScript_DOM实操_瀑布流_页面触底"></a>JavaScript_DOM实操_瀑布流_页面触底</h3><h3 id="JavaScript-DOM实操-瀑布流-上拉加载"><a href="#JavaScript-DOM实操-瀑布流-上拉加载" class="headerlink" title="JavaScript_DOM实操_瀑布流_上拉加载"></a>JavaScript_DOM实操_瀑布流_上拉加载</h3><h3 id="JavaScript-DOM实操-轮播图-页面布局"><a href="#JavaScript-DOM实操-轮播图-页面布局" class="headerlink" title="JavaScript_DOM实操_轮播图_页面布局"></a>JavaScript_DOM实操_轮播图_页面布局</h3><h3 id="JavaScript-DOM实操-轮播图-动态切换"><a href="#JavaScript-DOM实操-轮播图-动态切换" class="headerlink" title="JavaScript_DOM实操_轮播图_动态切换"></a>JavaScript_DOM实操_轮播图_动态切换</h3><h3 id="JavaScript-DOM实操-放大镜-页面布局"><a href="#JavaScript-DOM实操-放大镜-页面布局" class="headerlink" title="JavaScript_DOM实操_放大镜_页面布局"></a>JavaScript_DOM实操_放大镜_页面布局</h3><h3 id="JavaScript-DOM实操-放大镜-业务逻辑"><a href="#JavaScript-DOM实操-放大镜-业务逻辑" class="headerlink" title="JavaScript_DOM实操_放大镜_业务逻辑"></a>JavaScript_DOM实操_放大镜_业务逻辑</h3><h3 id="JavaScript-DOM实操-回到顶部"><a href="#JavaScript-DOM实操-回到顶部" class="headerlink" title="JavaScript_DOM实操_回到顶部"></a>JavaScript_DOM实操_回到顶部</h3><h2 id="浏览器模型-BOM"><a href="#浏览器模型-BOM" class="headerlink" title="浏览器模型(BOM)"></a>浏览器模型(BOM)</h2><h3 id="JavaScript-浏览器环境概述-BOM"><a href="#JavaScript-浏览器环境概述-BOM" class="headerlink" title="JavaScript_浏览器环境概述(BOM)"></a>JavaScript_浏览器环境概述(BOM)</h3><h3 id="JavaScript-script元素工作原理"><a href="#JavaScript-script元素工作原理" class="headerlink" title="JavaScript_script元素工作原理"></a>JavaScript_script元素工作原理</h3><h3 id="JavaScript-回流和重绘"><a href="#JavaScript-回流和重绘" class="headerlink" title="JavaScript_回流和重绘"></a>JavaScript_回流和重绘</h3><h3 id="JavaScript-定时器之setTimeout"><a href="#JavaScript-定时器之setTimeout" class="headerlink" title="JavaScript_定时器之setTimeout"></a>JavaScript_定时器之setTimeout</h3><h3 id="JavaScript-定时器之setInterval"><a href="#JavaScript-定时器之setInterval" class="headerlink" title="JavaScript_定时器之setInterval"></a>JavaScript_定时器之setInterval</h3><h3 id="JavaScript-定时器实操"><a href="#JavaScript-定时器实操" class="headerlink" title="JavaScript_定时器实操"></a>JavaScript_定时器实操</h3><h3 id="JavaScript-防抖-debounce"><a href="#JavaScript-防抖-debounce" class="headerlink" title="JavaScript_防抖(debounce)"></a>JavaScript_防抖(debounce)</h3><h3 id="JavaScript-节流-throttle"><a href="#JavaScript-节流-throttle" class="headerlink" title="JavaScript_节流(throttle)"></a>JavaScript_节流(throttle)</h3><h3 id="JavaScript-window对象-属性"><a href="#JavaScript-window对象-属性" class="headerlink" title="JavaScript_window对象_属性"></a>JavaScript_window对象_属性</h3><h3 id="JavaScript-window对象-方法"><a href="#JavaScript-window对象-方法" class="headerlink" title="JavaScript_window对象_方法"></a>JavaScript_window对象_方法</h3><h3 id="JavaScript-Navigator对象"><a href="#JavaScript-Navigator对象" class="headerlink" title="JavaScript_Navigator对象"></a>JavaScript_Navigator对象</h3><h3 id="JavaScript-Screen对象"><a href="#JavaScript-Screen对象" class="headerlink" title="JavaScript_Screen对象"></a>JavaScript_Screen对象</h3><h3 id="JavaScript-History对象"><a href="#JavaScript-History对象" class="headerlink" title="JavaScript_History对象"></a>JavaScript_History对象</h3><h3 id="JavaScript-Cookie对象"><a href="#JavaScript-Cookie对象" class="headerlink" title="JavaScript_Cookie对象"></a>JavaScript_Cookie对象</h3><h3 id="JavaScript-Cookie属性"><a href="#JavaScript-Cookie属性" class="headerlink" title="JavaScript_Cookie属性"></a>JavaScript_Cookie属性</h3><h3 id="JavaScript-封装Cookie"><a href="#JavaScript-封装Cookie" class="headerlink" title="JavaScript_封装Cookie"></a>JavaScript_封装Cookie</h3><h3 id="JavaScript-call-apply-bind函数"><a href="#JavaScript-call-apply-bind函数" class="headerlink" title="JavaScript_call_apply_bind函数"></a>JavaScript_call_apply_bind函数</h3><h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><h3 id="JavaScript-面向对象简介"><a href="#JavaScript-面向对象简介" class="headerlink" title="JavaScript_面向对象简介"></a>JavaScript_面向对象简介</h3><h3 id="JavaScript-new命令"><a href="#JavaScript-new命令" class="headerlink" title="JavaScript_new命令"></a>JavaScript_new命令</h3><h3 id="JavaScript-Prototype原型"><a href="#JavaScript-Prototype原型" class="headerlink" title="JavaScript_Prototype原型"></a>JavaScript_Prototype原型</h3><h3 id="JavaScript-实例-静态属性和方法"><a href="#JavaScript-实例-静态属性和方法" class="headerlink" title="JavaScript_实例_静态属性和方法"></a>JavaScript_实例_静态属性和方法</h3><h3 id="JavaScript-proto-属性"><a href="#JavaScript-proto-属性" class="headerlink" title="JavaScript_proto__属性"></a>JavaScript_proto__属性</h3><h3 id="JavaScript-constructor属性"><a href="#JavaScript-constructor属性" class="headerlink" title="JavaScript_constructor属性"></a>JavaScript_constructor属性</h3><h3 id="JavaScript-原型链"><a href="#JavaScript-原型链" class="headerlink" title="JavaScript_原型链"></a>JavaScript_原型链</h3><h3 id="JavaScript-instanceof运算符"><a href="#JavaScript-instanceof运算符" class="headerlink" title="JavaScript_instanceof运算符"></a>JavaScript_instanceof运算符</h3><h3 id="JavaScript-Object对象的相关方法"><a href="#JavaScript-Object对象的相关方法" class="headerlink" title="JavaScript_Object对象的相关方法"></a>JavaScript_Object对象的相关方法</h3><h3 id="JavaScript-对象的继承"><a href="#JavaScript-对象的继承" class="headerlink" title="JavaScript_对象的继承"></a>JavaScript_对象的继承</h3><h3 id="JavaScript-多重继承"><a href="#JavaScript-多重继承" class="headerlink" title="JavaScript_多重继承"></a>JavaScript_多重继承</h3><h3 id="JavaScript-严格模式"><a href="#JavaScript-严格模式" class="headerlink" title="JavaScript_严格模式"></a>JavaScript_严格模式</h3><h3 id="JavaScript-实操-选项卡-回顾"><a href="#JavaScript-实操-选项卡-回顾" class="headerlink" title="JavaScript_实操_选项卡_回顾"></a>JavaScript_实操_选项卡_回顾</h3><h3 id="JavaScript-实操-选项卡-面向对象"><a href="#JavaScript-实操-选项卡-面向对象" class="headerlink" title="JavaScript_实操_选项卡_面向对象"></a>JavaScript_实操_选项卡_面向对象</h3><h3 id="JavaScript-实操-选项卡-面向对象-继承"><a href="#JavaScript-实操-选项卡-面向对象-继承" class="headerlink" title="JavaScript_实操_选项卡_面向对象_继承"></a>JavaScript_实操_选项卡_面向对象_继承</h3><h2 id="正则对象"><a href="#正则对象" class="headerlink" title="正则对象"></a>正则对象</h2><h3 id="JavaScript-正则表达式基础"><a href="#JavaScript-正则表达式基础" class="headerlink" title="JavaScript_正则表达式基础"></a>JavaScript_正则表达式基础</h3><h3 id="JavaScript-字符串方法"><a href="#JavaScript-字符串方法" class="headerlink" title="JavaScript_字符串方法"></a>JavaScript_字符串方法</h3><h3 id="JavaScript-匹配规则之字面量字符和元字符"><a href="#JavaScript-匹配规则之字面量字符和元字符" class="headerlink" title="JavaScript_匹配规则之字面量字符和元字符"></a>JavaScript_匹配规则之字面量字符和元字符</h3><h3 id="JavaScript-匹配规则之转义符"><a href="#JavaScript-匹配规则之转义符" class="headerlink" title="JavaScript_匹配规则之转义符"></a>JavaScript_匹配规则之转义符</h3><h3 id="JavaScript-匹配规则之字符类"><a href="#JavaScript-匹配规则之字符类" class="headerlink" title="JavaScript_匹配规则之字符类"></a>JavaScript_匹配规则之字符类</h3><h3 id="JavaScript-匹配规则之预定义模式和重复类"><a href="#JavaScript-匹配规则之预定义模式和重复类" class="headerlink" title="JavaScript_匹配规则之预定义模式和重复类"></a>JavaScript_匹配规则之预定义模式和重复类</h3><h3 id="JavaScript-匹配规则之量词符和贪婪模式"><a href="#JavaScript-匹配规则之量词符和贪婪模式" class="headerlink" title="JavaScript_匹配规则之量词符和贪婪模式"></a>JavaScript_匹配规则之量词符和贪婪模式</h3><h3 id="JavaScript-匹配规则之修饰符和组匹配"><a href="#JavaScript-匹配规则之修饰符和组匹配" class="headerlink" title="JavaScript_匹配规则之修饰符和组匹配"></a>JavaScript_匹配规则之修饰符和组匹配</h3><h3 id="JavaScript-正则应用场景"><a href="#JavaScript-正则应用场景" class="headerlink" title="JavaScript_正则应用场景"></a>JavaScript_正则应用场景</h3><h3 id="JavaScript-排序之冒泡排序"><a href="#JavaScript-排序之冒泡排序" class="headerlink" title="JavaScript_排序之冒泡排序"></a>JavaScript_排序之冒泡排序</h3><h3 id="JavaScript-算法之递归"><a href="#JavaScript-算法之递归" class="headerlink" title="JavaScript_算法之递归"></a>JavaScript_算法之递归</h3><h3 id="JavaScript-排序之快速排序"><a href="#JavaScript-排序之快速排序" class="headerlink" title="JavaScript_排序之快速排序"></a>JavaScript_排序之快速排序</h3><h3 id="Chrome浏览器插件下载"><a href="#Chrome浏览器插件下载" class="headerlink" title="Chrome浏览器插件下载"></a>Chrome浏览器插件下载</h3><h3 id="JavaScript-JSON对象"><a href="#JavaScript-JSON对象" class="headerlink" title="JavaScript_JSON对象"></a>JavaScript_JSON对象</h3><h3 id="JavaScript-编程风格-上"><a href="#JavaScript-编程风格-上" class="headerlink" title="JavaScript_编程风格(上)"></a>JavaScript_编程风格(上)</h3><h3 id="JavaScript-编程风格-下"><a href="#JavaScript-编程风格-下" class="headerlink" title="JavaScript_编程风格(下)"></a>JavaScript_编程风格(下)</h3><h2 id="JavaScript设计模式"><a href="#JavaScript设计模式" class="headerlink" title="JavaScript设计模式"></a>JavaScript设计模式</h2><h3 id="JavaScript设计模式简介"><a href="#JavaScript设计模式简介" class="headerlink" title="JavaScript设计模式简介"></a>JavaScript设计模式简介</h3><h3 id="设计模式之工厂模式"><a href="#设计模式之工厂模式" class="headerlink" title="设计模式之工厂模式"></a>设计模式之工厂模式</h3><h3 id="设计模式之单例模式"><a href="#设计模式之单例模式" class="headerlink" title="设计模式之单例模式"></a>设计模式之单例模式</h3><h3 id="设计模式之原型模式"><a href="#设计模式之原型模式" class="headerlink" title="设计模式之原型模式"></a>设计模式之原型模式</h3><h3 id="设计模式之适配器模式"><a href="#设计模式之适配器模式" class="headerlink" title="设计模式之适配器模式"></a>设计模式之适配器模式</h3><h3 id="设计模式之代理模式"><a href="#设计模式之代理模式" class="headerlink" title="设计模式之代理模式"></a>设计模式之代理模式</h3><h3 id="设计模式之策略模式"><a href="#设计模式之策略模式" class="headerlink" title="设计模式之策略模式"></a>设计模式之策略模式</h3><h3 id="设计模式之迭代器模式"><a href="#设计模式之迭代器模式" class="headerlink" title="设计模式之迭代器模式"></a>设计模式之迭代器模式</h3><h3 id="设计模式之观察者-发布订阅-模式"><a href="#设计模式之观察者-发布订阅-模式" class="headerlink" title="设计模式之观察者(发布订阅)模式"></a>设计模式之观察者(发布订阅)模式</h3><h3 id="设计模式之命令模式"><a href="#设计模式之命令模式" class="headerlink" title="设计模式之命令模式"></a>设计模式之命令模式</h3><h3 id="设计模式之状态模式"><a href="#设计模式之状态模式" class="headerlink" title="设计模式之状态模式"></a>设计模式之状态模式</h3><h2 id="ECMAScript6新特性"><a href="#ECMAScript6新特性" class="headerlink" title="ECMAScript6新特性"></a>ECMAScript6新特性</h2><h3 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h3><h3 id="ECMAScript6-简介"><a href="#ECMAScript6-简介" class="headerlink" title="ECMAScript6 简介"></a>ECMAScript6 简介</h3><h3 id="Nodejs环境安装"><a href="#Nodejs环境安装" class="headerlink" title="Nodejs环境安装"></a>Nodejs环境安装</h3><h3 id="Babel转码器"><a href="#Babel转码器" class="headerlink" title="Babel转码器"></a>Babel转码器</h3><h3 id="Let命令"><a href="#Let命令" class="headerlink" title="Let命令"></a>Let命令</h3><h3 id="Let命令应用场景"><a href="#Let命令应用场景" class="headerlink" title="Let命令应用场景"></a>Let命令应用场景</h3><h3 id="Const命令"><a href="#Const命令" class="headerlink" title="Const命令"></a>Const命令</h3><h3 id="变量的解构赋值-数组解构赋值"><a href="#变量的解构赋值-数组解构赋值" class="headerlink" title="变量的解构赋值_数组解构赋值"></a>变量的解构赋值_数组解构赋值</h3><h3 id="变量的解构赋值-对象解构赋值"><a href="#变量的解构赋值-对象解构赋值" class="headerlink" title="变量的解构赋值_对象解构赋值"></a>变量的解构赋值_对象解构赋值</h3><h3 id="变量的解构赋值-用途"><a href="#变量的解构赋值-用途" class="headerlink" title="变量的解构赋值_用途"></a>变量的解构赋值_用途</h3><h3 id="字符串扩展"><a href="#字符串扩展" class="headerlink" title="字符串扩展"></a>字符串扩展</h3><h3 id="字符串新增方法"><a href="#字符串新增方法" class="headerlink" title="字符串新增方法"></a>字符串新增方法</h3><h3 id="数值扩展"><a href="#数值扩展" class="headerlink" title="数值扩展"></a>数值扩展</h3><h3 id="Math函数扩展"><a href="#Math函数扩展" class="headerlink" title="Math函数扩展"></a>Math函数扩展</h3><h3 id="数组扩展-扩展运算符"><a href="#数组扩展-扩展运算符" class="headerlink" title="数组扩展_扩展运算符"></a>数组扩展_扩展运算符</h3><h3 id="数组扩展-新增方法-一"><a href="#数组扩展-新增方法-一" class="headerlink" title="数组扩展_新增方法(一)"></a>数组扩展_新增方法(一)</h3><h3 id="数组扩展-新增方法-二"><a href="#数组扩展-新增方法-二" class="headerlink" title="数组扩展_新增方法(二)"></a>数组扩展_新增方法(二)</h3><h3 id="数组扩展-新增方法-三"><a href="#数组扩展-新增方法-三" class="headerlink" title="数组扩展_新增方法(三)"></a>数组扩展_新增方法(三)</h3><h3 id="对象的扩展"><a href="#对象的扩展" class="headerlink" title="对象的扩展"></a>对象的扩展</h3><h3 id="对象的新增方法"><a href="#对象的新增方法" class="headerlink" title="对象的新增方法"></a>对象的新增方法</h3><h3 id="运算符的扩展"><a href="#运算符的扩展" class="headerlink" title="运算符的扩展"></a>运算符的扩展</h3><h3 id="函数的扩展-函数参数的默认值"><a href="#函数的扩展-函数参数的默认值" class="headerlink" title="函数的扩展_函数参数的默认值"></a>函数的扩展_函数参数的默认值</h3><h3 id="函数的扩展-箭头函数"><a href="#函数的扩展-箭头函数" class="headerlink" title="函数的扩展_箭头函数"></a>函数的扩展_箭头函数</h3><h3 id="函数的扩展-其他"><a href="#函数的扩展-其他" class="headerlink" title="函数的扩展_其他"></a>函数的扩展_其他</h3><h3 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h3><h3 id="Set数据结构"><a href="#Set数据结构" class="headerlink" title="Set数据结构"></a>Set数据结构</h3><h3 id="Set数据结构方法"><a href="#Set数据结构方法" class="headerlink" title="Set数据结构方法"></a>Set数据结构方法</h3><h3 id="WeakSet数据结构"><a href="#WeakSet数据结构" class="headerlink" title="WeakSet数据结构"></a>WeakSet数据结构</h3><h3 id="Map数据结构"><a href="#Map数据结构" class="headerlink" title="Map数据结构"></a>Map数据结构</h3><h3 id="Map数据结构的属性和方法"><a href="#Map数据结构的属性和方法" class="headerlink" title="Map数据结构的属性和方法"></a>Map数据结构的属性和方法</h3><h3 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h3><h3 id="Reflect"><a href="#Reflect" class="headerlink" title="Reflect"></a>Reflect</h3><h3 id="同步与异步"><a href="#同步与异步" class="headerlink" title="同步与异步"></a>同步与异步</h3><h3 id="Promise对象"><a href="#Promise对象" class="headerlink" title="Promise对象"></a>Promise对象</h3><h3 id="Promise对象-Ajax实操"><a href="#Promise对象-Ajax实操" class="headerlink" title="Promise对象_Ajax实操"></a>Promise对象_Ajax实操</h3><h3 id="Promise对象-方法"><a href="#Promise对象-方法" class="headerlink" title="Promise对象_方法"></a>Promise对象_方法</h3><h3 id="Promise对象的异步应用"><a href="#Promise对象的异步应用" class="headerlink" title="Promise对象的异步应用"></a>Promise对象的异步应用</h3><h3 id="Generato函数的语法"><a href="#Generato函数的语法" class="headerlink" title="Generato函数的语法"></a>Generato函数的语法</h3><h3 id="Generator函数的异步应用"><a href="#Generator函数的异步应用" class="headerlink" title="Generator函数的异步应用"></a>Generator函数的异步应用</h3><h3 id="Async函数"><a href="#Async函数" class="headerlink" title="Async函数"></a>Async函数</h3><h3 id="Fetch-API"><a href="#Fetch-API" class="headerlink" title="Fetch API"></a>Fetch API</h3><h3 id="Fetch-API-POST请求注意事项"><a href="#Fetch-API-POST请求注意事项" class="headerlink" title="Fetch API POST请求注意事项"></a>Fetch API POST请求注意事项</h3><h3 id="Fetch网络请求应用"><a href="#Fetch网络请求应用" class="headerlink" title="Fetch网络请求应用"></a>Fetch网络请求应用</h3><h3 id="封装Fetch网络请求"><a href="#封装Fetch网络请求" class="headerlink" title="封装Fetch网络请求"></a>封装Fetch网络请求</h3><h3 id="Class的基本语法"><a href="#Class的基本语法" class="headerlink" title="Class的基本语法"></a>Class的基本语法</h3><h3 id="Class属性与方法"><a href="#Class属性与方法" class="headerlink" title="Class属性与方法"></a>Class属性与方法</h3><h3 id="Class最新提案"><a href="#Class最新提案" class="headerlink" title="Class最新提案"></a>Class最新提案</h3><h3 id="Class的继承"><a href="#Class的继承" class="headerlink" title="Class的继承"></a>Class的继承</h3><h3 id="Module的语法"><a href="#Module的语法" class="headerlink" title="Module的语法"></a>Module的语法</h3><h3 id="ES6知识点总结"><a href="#ES6知识点总结" class="headerlink" title="ES6知识点总结"></a>ES6知识点总结</h3>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML和CSS基础</title>
+    <url>/2024/03/07/HTML%E5%92%8CCSS/</url>
+    <content><![CDATA[<p>HTML5是HTML最新的修订版本，由万维网联盟（W3C）于2014年10月完成标准制定。目标是取代1999年所制定的HTML 4.01和XHTML 1.0标准，以期能在网际网路应用迅速发展的时候，使网路标准达到符合当代的网路需求。</p>
+<span id="more"></span>
+
+<h1 id="HTML和CSS基础"><a href="#HTML和CSS基础" class="headerlink" title="HTML和CSS基础"></a>HTML和CSS基础</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="写一个网页"><a href="#写一个网页" class="headerlink" title="写一个网页"></a>写一个网页</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;我的网页&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        hello,我的第一个网页</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="前端工具的选择与安装"><a href="#前端工具的选择与安装" class="headerlink" title="前端工具的选择与安装"></a>前端工具的选择与安装</h3><p><strong>vscode</strong></p>
+<ul>
+<li>支持多平台</li>
+<li>免费开源</li>
+</ul>
+<p><strong>HBbuilder</strong></p>
+<ul>
+<li>支持多平台</li>
+<li>免费开源</li>
+<li>专门开发uni-app</li>
+</ul>
+<p><strong>Webstrom</strong></p>
+<ul>
+<li>收费</li>
+<li>前端开发利器</li>
+<li>硬件要求高</li>
+</ul>
+<p>浏览器推荐使用Chrome；开发者工具推荐使用Vscode</p>
+<h3 id="VScode开发者工具快捷键"><a href="#VScode开发者工具快捷键" class="headerlink" title="VScode开发者工具快捷键"></a>VScode开发者工具快捷键</h3><p><strong>VSCode常用快捷键列表</strong></p>
+<ol>
+<li>代码格式化：Shift+Alt+F</li>
+<li>向上或向下移动一行：Alt+Up 或 Alt+Down</li>
+<li>快速复制一行代码：Shift+Alt+Up 或 Shift+Alt+Down</li>
+<li>快速保存：Ctrl + S</li>
+<li>快速查找：Ctrl + F</li>
+<li>快速替换：Ctrl + H</li>
+</ol>
+<h3 id="HTML5的简介基础骨架"><a href="#HTML5的简介基础骨架" class="headerlink" title="HTML5的简介基础骨架"></a>HTML5的简介基础骨架</h3><p>标签有<strong>非空标签</strong>和<strong>空标签</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>是H5的声明位于文档的最前面，处于标签之前。 他是网页必备的组成部分，避免浏览器的怪异模式。<br><strong>网页的基本结构</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><strong><code>&lt;html&gt;</code></strong><br>定义 HTML 文档，这个元素我们浏览器看到后就明白这是个HTML文档了，所以你的其它元素要包裹在它里面，标签限定了文档的开始点和结束点。<br><strong><code>&lt;head&gt;</code></strong><br>head标签用于定义文档的头部。文档的头部描述了文档的各种属性和信息，包括文档的标题、在 Web 中的位置以及和其他文档的关系等。绝大多数文档头部包含的数据都不会真正作为内容显示给读者。<br>head标签必须包含在html标签中<br><strong><code>&lt;meta&gt;</code></strong><br>meta叫元信息&#x2F;元数据标签<br>提供有关页面的元信息, 比如针对搜索引擎和更新频度的描述和关键词<br><strong>单标签</strong>,meta标签用来描述一个HTML网页文档的属性，关键词等<br><strong>属性</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>属性值</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>charset</td>
+<td>UTF-8</td>
+<td>文档字符编码</td>
+</tr>
+<tr>
+<td>name</td>
+<td>charset、http-equiv、viewport</td>
+<td>文档级元数据的名称</td>
+</tr>
+<tr>
+<td>content</td>
+<td></td>
+<td>根据name的取值设置相应的值</td>
+</tr>
+</tbody></table>
+<p><strong><code>&lt;title&gt;</code></strong></p>
+<ol>
+<li>可定义文档的标题。</li>
+<li>它显示在浏览器窗口的标题栏或状态栏上。</li>
+<li><code>&lt;title&gt; </code>标签是 <code>&lt;head&gt;</code>标签中唯一必须要求包含的东西，就是说写head一定要写title</li>
+<li><code>&lt;title&gt;</code>的增加有利于SEO优化</li>
+</ol>
+<blockquote>
+<p>SEO是搜索引擎优化的英文缩写。通过对网站内容调整，满足搜索引擎的排名需求</p>
+</blockquote>
+<p><strong><code>&lt;body&gt;</code></strong><br>body 元素定义文档的主体。<br>body 元素包含文档的所有内容（比如文本、超链接、图像、表格和列表等等。）<br>它会直接在页面中显示出来,也就是用户可以直观看到的内容<br>body 元素有且只有一个</p>
+<h3 id="HTML注释"><a href="#HTML注释" class="headerlink" title="HTML注释"></a>HTML注释</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 这是一段注释 --&gt; //浏览器不会显示</span><br></pre></td></tr></table></figure>
+
+<h2 id="HTML5基础元素"><a href="#HTML5基础元素" class="headerlink" title="HTML5基础元素"></a>HTML5基础元素</h2><h3 id="标签之标题"><a href="#标签之标题" class="headerlink" title="标签之标题"></a>标签之标题</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;h1&gt;一级标题&lt;/h1&gt;</span><br><span class="line">&lt;h2&gt;二级标题&lt;/h2&gt;</span><br><span class="line">&lt;h3&gt;三级标题&lt;/h3&gt;</span><br><span class="line">&lt;h4&gt;四级标题&lt;/h4&gt;</span><br><span class="line">&lt;h5&gt;五级标题&lt;/h5&gt;</span><br><span class="line">&lt;h6&gt;六级标题&lt;/h6&gt;</span><br></pre></td></tr></table></figure>
+<p>一个html文件中只能有一个h1标签，也是为了SEO</p>
+<blockquote>
+<p>快捷键<code>h$*6</code>快速生成h1-h6六个标签</p>
+</blockquote>
+<p>Vscode安装Open in Browser插件右键在浏览器打开<br><strong>正确使用标题标签</strong></p>
+<ul>
+<li>请确保将 HTML 标题标签只用于标题。</li>
+<li>不要为了让字体变粗变大而使用标题标签</li>
+<li>正确使用标题标签有益于ESO</li>
+</ul>
+<p><strong>标签的属性</strong><br>默认靠左</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">align=&quot;left | center | right&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="标签之段落-换行-水平线"><a href="#标签之段落-换行-水平线" class="headerlink" title="标签之段落_换行_水平线"></a>标签之段落_换行_水平线</h3><p><code>&lt;p&gt;&lt;/p&gt;</code>段落标签<br><code>&lt;br&gt;</code>换行标签 单标签<br><code>&lt;hr&gt;</code>水平线标签 单标签<br><strong>属性</strong><br><code>&lt;hr color=&quot;&quot; width=&quot;&quot; size=&quot;&quot; align&quot;&quot;/&gt;</code></p>
+<ul>
+<li>color：设置水平线的颜色</li>
+<li>width：设置水平线的长度</li>
+<li>size：设置水平线的高度</li>
+<li>align：设置水平线的对齐方式（默认居中），可取值left|right</li>
+</ul>
+<h3 id="标签之图片"><a href="#标签之图片" class="headerlink" title="标签之图片"></a>标签之图片</h3><p><code>&lt;img&gt;</code>标签定义 HTML 页面中的图像，&#x3D;单标签&#x3D;</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;img src=&quot;1.img&quot; alt=&quot;水果&quot; title=&quot;苹果&quot; width=&quot;10px&quot; height=&quot;&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>图床网站：imgurl.org</p>
+<p><strong>属性</strong></p>
+<ul>
+<li>src：路径（图片地址与名字）</li>
+<li>alt：规定图像的替代文本(利于SEO优化)</li>
+<li>width：规定图像的宽度</li>
+<li>height：规定图像的高度</li>
+<li>title：鼠标悬停在图片上给予提示</li>
+</ul>
+<h3 id="路径详解"><a href="#路径详解" class="headerlink" title="路径详解"></a>路径详解</h3><ul>
+<li><p>绝对路径<br>绝对路径是电脑的盘符存储与访问的具体地址</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;img src=&quot;E:\itbaizhanCode\1.jpg&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>相对路径<br>两者相对关系，两者在同⼀路径下可以直接访问</p>
+<ul>
+<li>⼦级关系: &#x2F;</li>
+<li>⽗级关系: ..&#x2F;</li>
+<li>同级关系: .&#x2F;</li>
+</ul>
+</li>
+<li><p>网络路径<br>具体的⽹络地址: <a href="http://iwenwiki.com/api/newworld/images/n1.png">http://iwenwiki.com/api/newworld/images/n1.png</a></p>
+</li>
+</ul>
+<h3 id="标签之超文本链接"><a href="#标签之超文本链接" class="headerlink" title="标签之超文本链接"></a>标签之超文本链接</h3><p>超链接描述<br>HTML使用标签<code> &lt;a&gt;</code>来设置超文本链接<br>超链接可以是一个字，一个词，或者一组词，也可以是一幅图像，您可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。</p>
+<p>超链接属性<br>在标签<code>&lt;a&gt;</code>中使用了href属性来描述链接的地址</p>
+<p>默认情况下，链接将以，以下形式出现在浏览器中：</p>
+<ul>
+<li><p>一个未访问过的链接显示为蓝色字体并带有下划线。</p>
+</li>
+<li><p>访问过的链接显示为紫色并带有下划线。</p>
+</li>
+<li><p>点击链接时，链接显示为红色并带有下划线。</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;url&quot;&gt;链接内容&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;a&gt;</code>标签里可以嵌套别的标签，比如图片</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;url&quot;&gt;&lt;img src=&quot;./1.img&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>属性</strong></p>
+<ul>
+<li>title</li>
+<li>href</li>
+<li>alt</li>
+<li>target</li>
+</ul>
+<h3 id="超链接之锚点"><a href="#超链接之锚点" class="headerlink" title="超链接之锚点"></a>超链接之锚点</h3><p>超链接可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。<br>跳转到当前文档的某个部分的形式就是“锚点”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;#hello&quot;&gt;跳转到当前页&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id=&quot;hello&quot;&gt;文本信息&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="标签之文本"><a href="#标签之文本" class="headerlink" title="标签之文本"></a>标签之文本</h3><p>常用文本标签</p>
+<ul>
+<li><code>&lt;em&gt;</code> 定义着重文字</li>
+<li><code>&lt;b&gt;</code> 定义粗体文本</li>
+<li><code>&lt;i&gt;</code> 定义斜体子</li>
+<li><code>&lt;strong&gt;</code> 定义加重语气</li>
+<li><code>&lt;sub&gt;</code> 定义下标字</li>
+<li><code>&lt;sup&gt;</code> 定义上标字</li>
+<li><code>&lt;del&gt;</code> 定义删除字</li>
+<li><code>&lt;span&gt;</code> 元素没有特定的含义</li>
+</ul>
+<blockquote>
+<p>常用文本标签和段落是不同的，段落代表一段文本，而文本标签一般表示文本词汇</p>
+</blockquote>
+<h3 id="列表标签之有序列表"><a href="#列表标签之有序列表" class="headerlink" title="列表标签之有序列表"></a>列表标签之有序列表</h3><p>有序列表是一列项目，列表项目使用数字进行标记。 有序列表始于<code>&lt;ol&gt;</code>标签。每个列表项始于<code> &lt;li&gt;</code>标签。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li&gt;水果&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;蔬菜&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+
+<p>type属性<code>&lt;ol&gt;</code>的属性type 拥有的选项</p>
+<ul>
+<li>1 表示列表项目用数字标号（1,2,3…）</li>
+<li>a 表示列表项目用小写字母标号（a,b,c…）</li>
+<li>A 表示列表项目用大写字母标号（A,B,C…）</li>
+<li>i 表示列表项目用小写罗马数字标号（i,ii,iii…）</li>
+<li>I 表示列表项目用大写罗马数字标号（I,II,III…）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li type=&quot;A&quot;&gt;水果&lt;/li&gt;</span><br><span class="line">    &lt;li type=&quot;A&quot;&gt;蔬菜&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>有序标签嵌套</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li&gt;水果&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;蔬菜</span><br><span class="line">        &lt;ol&gt;</span><br><span class="line">            &lt;li type=&quot;A&quot;&gt;青菜&lt;/li&gt;</span><br><span class="line">            &lt;li type=&quot;A&quot;&gt;白菜&lt;/li&gt;</span><br><span class="line">            &lt;li type=&quot;A&quot;&gt;菠菜&lt;/li&gt;</span><br><span class="line">        &lt;/ol&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">    &lt;li&gt;肉&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="列表标签之无序列表"><a href="#列表标签之无序列表" class="headerlink" title="列表标签之无序列表"></a>列表标签之无序列表</h3><p>无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记<br>无序列表始于 <code>&lt;ul&gt;</code> 标签。每个列表项始于<code>&lt;li&gt;</code> 标签。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;水果&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;蔬菜&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>type属性</strong></p>
+<ul>
+<li>disc 默认实心圆</li>
+<li>circle 空心圆</li>
+<li>square 小方块</li>
+<li>none 不显示</li>
+</ul>
+<blockquote>
+<p>无序标签嵌套，同有序标签</p>
+</blockquote>
+<p><strong>常见应用场景</strong></p>
+<ul>
+<li>无序标签的列表效果</li>
+<li>导航效果</li>
+</ul>
+<h3 id="列表标签之自定义列表"><a href="#列表标签之自定义列表" class="headerlink" title="列表标签之自定义列表"></a>列表标签之自定义列表</h3><p><strong>自定义列表实现</strong><br>自定义列表不仅仅是一列项目，而是项目及其注释的组合。<br>自定义列表以 <code>&lt;dl&gt;</code> 标签开始。每个自定义列表项以 <code>&lt;dt&gt;</code> 开始。每个自定义列表项的定义以 <code>&lt;dd&gt;</code> 开始。<br>自定义列表用的很少</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;dl&gt;</span><br><span class="line">  &lt;dt&gt;数字&lt;/dt&gt;</span><br><span class="line">  &lt;dd&gt;1&lt;/dd&gt;</span><br><span class="line">  &lt;dd&gt;2&lt;/dd&gt;</span><br><span class="line">  &lt;dt&gt;字母&lt;/dt&gt;</span><br><span class="line">  &lt;dd&gt;A&lt;/dd&gt;</span><br><span class="line">  &lt;dd&gt;B&lt;/dd&gt;</span><br><span class="line">&lt;/dl&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>应用场景</strong><br>在一些需要对列表进行解释的部分，可以使用自定义列表</p>
+<h3 id="标签之表格"><a href="#标签之表格" class="headerlink" title="标签之表格"></a>标签之表格</h3><p><strong>表格展示效果</strong><br>表格在数据展示方面非常简单，并且表现优秀<br><strong>表格组成与特点</strong></p>
+<blockquote>
+<p>行、列、单元格<br>单元格特点：同行等高、同列等宽。</p>
+</blockquote>
+<p><strong>表格标签</strong><br>表格<code>&lt;table&gt;</code>表示；行用<code>&lt;tr&gt;</code>表示；列（单元格）用<code>&lt;td&gt;</code>表示</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;11&lt;td&gt;</span><br><span class="line">        &lt;td&gt;12&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;21&lt;td&gt;</span><br><span class="line">        &lt;td&gt;22&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;31&lt;td&gt;</span><br><span class="line">        &lt;td&gt;32&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+
+<p>要显示边框线</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;table boeder=&quot;1&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>表格的其他标签</strong></p>
+<ul>
+<li>表格名字：<code>&lt;caption&gt;</code></li>
+<li>表格头部：<code>&lt;thead&gt;</code></li>
+<li>特殊单元格：<code>&lt;th&gt;</code></li>
+<li>表格的身体：<code>&lt;tbody&gt;</code> (包裹<code>&lt;tr&gt;</code>和<code>&lt;/td&gt;</code>)</li>
+<li>表格的脚步：<code>&lt;tfoot&gt;</code> (包裹<code>&lt;tr&gt;</code>和<code>&lt;/td&gt;</code>)</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>.net入门</title>
+    <url>/2024/03/05/net%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h2 id="关于-net全栈工程师"><a href="#关于-net全栈工程师" class="headerlink" title="关于.net全栈工程师"></a>关于.net全栈工程师</h2><p>2024年需要全栈工程师，但是学习.net出来不一定要从事互联网行业</p>
+<span id="more"></span>
+
+<h3 id="全栈开发工程师需要会的技能"><a href="#全栈开发工程师需要会的技能" class="headerlink" title="全栈开发工程师需要会的技能"></a>全栈开发工程师需要会的技能</h3><ul>
+<li>前端：用户能看到的界面;交互（用户与服务器）</li>
+<li>服务器：数据库操作；给前端提供数据服务</li>
+<li>数据库：功能是存储数据</li>
+</ul>
+<h2 id="Java-python-Node-js比较"><a href="#Java-python-Node-js比较" class="headerlink" title="Java&#x2F;python&#x2F;Node.js比较"></a>Java&#x2F;python&#x2F;Node.js比较</h2><h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><p><strong>应用：</strong></p>
+<ul>
+<li>企业级开发&#x2F;银行&#x2F;铁路&#x2F;大型应用</li>
+<li>移动端： android</li>
+<li>大数据开发</li>
+</ul>
+<p><strong>特点：</strong></p>
+<ul>
+<li>优点；应用广&#x2F;开源&#x2F;现有框架多</li>
+<li>不足：难度&#x2F;技术更新快&#x2F;不适合做桌面应用&#x2F;就业要求（学历要求）</li>
+</ul>
+<h3 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h3><p>应用：网站<br><strong>特点：</strong></p>
+<ul>
+<li>优点：简单</li>
+<li>不足：安全，性能</li>
+</ul>
+<h3 id="python"><a href="#python" class="headerlink" title="python"></a>python</h3><p>应用：Al和大数据开发</p>
+<h3 id="net（c-）"><a href="#net（c-）" class="headerlink" title=".net（c#）"></a>.net（c#）</h3><p><strong>应用：</strong></p>
+<ul>
+<li>桌面应用（强项：上位机（c&#x2F;c++&#x2F;c#&#x2F;QT））<ul>
+<li>制造业</li>
+<li>传统工业</li>
+</ul>
+</li>
+</ul>
+<p><strong>特点：</strong></p>
+<ul>
+<li>优点： 对学历要求不高</li>
+<li>web应用<ul>
+<li>政府的一些项目（钱好拿，性能要求不高）</li>
+<li>互联网（基本被JAVA吃光了，但是可以做）</li>
+<li>MES系统（制造执行系统）</li>
+</ul>
+</li>
+<li>大数据</li>
+</ul>
+<h3 id="web应用-b-s-与桌面应用-c-s"><a href="#web应用-b-s-与桌面应用-c-s" class="headerlink" title="web应用(b&#x2F;s)与桌面应用(c&#x2F;s)"></a>web应用(b&#x2F;s)与桌面应用(c&#x2F;s)</h3><p><strong>web应用(b&#x2F;s)：browser&#x2F;server</strong></p>
+<ul>
+<li>特点：同桌面相反</li>
+</ul>
+<p><strong>c&#x2F;s: client&#x2F;server</strong></p>
+<ul>
+<li>优点：安全&#x2F;性能</li>
+<li>不足：下载安装&#x2F;更新</li>
+</ul>
+<h2 id="就业条件"><a href="#就业条件" class="headerlink" title="就业条件"></a>就业条件</h2><h3 id="需要具备的技术"><a href="#需要具备的技术" class="headerlink" title="需要具备的技术"></a>需要具备的技术</h3><h4 id="前端技术"><a href="#前端技术" class="headerlink" title="前端技术"></a>前端技术</h4><ul>
+<li>HTML+CSS:静态界面</li>
+<li>JavaScript语言：交互界面（动）</li>
+<li>前端框架（vue&#x2F;react&#x2F;Angular）</li>
+<li>小程序（微信小程序）</li>
+</ul>
+<h4 id="服务器开发技术"><a href="#服务器开发技术" class="headerlink" title="服务器开发技术"></a>服务器开发技术</h4><ul>
+<li>c#语言</li>
+<li>ADO.net与EF：操作数据库</li>
+<li>Linq：对象操作技术</li>
+<li>桌面应用开发（winform + WPF）</li>
+<li>web应用开发(Asp.net MVC)</li>
+</ul>
+<h4 id="数据库技术"><a href="#数据库技术" class="headerlink" title="数据库技术"></a>数据库技术</h4><ul>
+<li>MS SQLServer</li>
+<li>MySQL｜PostgreSQL(开源)</li>
+</ul>
+<h4 id="辅助技术"><a href="#辅助技术" class="headerlink" title="辅助技术"></a>辅助技术</h4><ul>
+<li>Git</li>
+<li>原型｜PS</li>
+</ul>
+<h4 id="上位机"><a href="#上位机" class="headerlink" title="上位机"></a>上位机</h4><ul>
+<li>C#&#x2F;ADD.NET&#x2F;EF</li>
+<li>多线程开发，通讯协议</li>
+<li>winform -&gt;WPF(界面更漂亮)</li>
+</ul>
+<h4 id="MES"><a href="#MES" class="headerlink" title="MES"></a>MES</h4><ul>
+<li>ASP.NET</li>
+<li>前端技术</li>
+</ul>
+<h3 id="软技能"><a href="#软技能" class="headerlink" title="软技能"></a>软技能</h3><ul>
+<li>学习能力</li>
+<li>抗压能力</li>
+<li>沟通能力</li>
+<li>学习能力</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>.net</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Axure RP</title>
+    <url>/2024/03/06/%E4%BD%BF%E7%94%A8AxureRP%E5%88%B6%E4%BD%9C%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%8E%9F%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="使用-Axure-RP-制作交互式原型"><a href="#使用-Axure-RP-制作交互式原型" class="headerlink" title="使用 Axure RP 制作交互式原型"></a>使用 Axure RP 制作交互式原型</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>熟练使用 Axure RP 9.0 工具制作交互式原型</li>
+</ul>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><ul>
+<li><p>熟悉 Axure RP 工具的用法</p>
+</li>
+<li><p><strong>掌握 Axure RP 常用组件用法</strong></p>
+</li>
+<li><p><strong>能够使用 Axure RP 开发静态原型</strong></p>
+</li>
+<li><p><strong>能够使用 Axure RP 开发交互式原型</strong></p>
+</li>
+</ul>
+<h2 id="参考案例"><a href="#参考案例" class="headerlink" title="参考案例"></a>参考案例</h2><ul>
+<li><a href="https://www.axureshop.com/">Axure Shop 产品原型网</a></li>
+</ul>
+<h2 id="一、基础概念"><a href="#一、基础概念" class="headerlink" title="一、基础概念"></a>一、基础概念</h2><ul>
+<li>软件开发流程<ul>
+<li>问题定义 : 旅游网站和小程序</li>
+<li>需求分析<ul>
+<li>明确客户端需求</li>
+</ul>
+</li>
+<li>软件设计<ul>
+<li>UI设计</li>
+<li>数据库设计</li>
+<li>架构设计</li>
+</ul>
+</li>
+<li>软件开发<ul>
+<li>前端开发</li>
+<li>服务器端开发</li>
+<li>数据库开发</li>
+</ul>
+</li>
+<li>软件测试<ul>
+<li>单元测试</li>
+<li>集成测试</li>
+</ul>
+</li>
+<li>发布布署</li>
+<li>软件培训</li>
+<li>升级</li>
+</ul>
+</li>
+<li>软件开发角色<ul>
+<li>产品经理</li>
+<li>项目经理</li>
+<li>架构师</li>
+<li>设计师<ul>
+<li>UI设计师</li>
+<li>UX：用户体验师</li>
+</ul>
+</li>
+<li>开发工程师<ul>
+<li>web 前端开发人员</li>
+<li>服务器端开发人员</li>
+</ul>
+</li>
+<li>测试工程师</li>
+<li>运维工程师<ul>
+<li>Linux</li>
+</ul>
+</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<h2 id="二、原型"><a href="#二、原型" class="headerlink" title="二、原型"></a>二、原型</h2><h3 id="2-1-场景描述"><a href="#2-1-场景描述" class="headerlink" title="2.1 场景描述"></a>2.1 场景描述</h3><ul>
+<li>旅游网站和小程序(APP)</li>
+<li>问题<ul>
+<li>做成什么样？</li>
+<li>如果快速确定项目需求？</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-什么是原型"><a href="#2-2-什么是原型" class="headerlink" title="2.2 什么是原型"></a>2.2 什么是原型</h3><ul>
+<li>软件原型是用<strong>最少</strong>的时间和<strong>最快</strong>的速度开发出的软件的初始版本，也是用来表现软件核心功能的系统版本</li>
+<li>软件原型相当于<strong>基础产品</strong></li>
+</ul>
+<h3 id="2-3-原型意义"><a href="#2-3-原型意义" class="headerlink" title="2.3 原型意义"></a>2.3 原型意义</h3><ul>
+<li>引导客户明确需求</li>
+<li>分解软件功能复杂性</li>
+<li>减少并杜绝二义性</li>
+<li>降低项目组内部的沟通成本</li>
+</ul>
+<h3 id="2-4-原型种类"><a href="#2-4-原型种类" class="headerlink" title="2.4 原型种类"></a>2.4 原型种类</h3><ul>
+<li>草图<ul>
+<li>软件早期构思上</li>
+</ul>
+</li>
+<li>低保真原型<ul>
+<li>布局(没有配色|图片)</li>
+</ul>
+</li>
+<li>高保真原型</li>
+</ul>
+<h3 id="2-5-原型制作工具"><a href="#2-5-原型制作工具" class="headerlink" title="2.5 原型制作工具"></a>2.5 原型制作工具</h3><ul>
+<li>线上工具<ul>
+<li><a href="https://modao.cc/feature/prototype?jsid=SEM-BAIDU-CJPZ-prototype_slogan">默刀</a></li>
+<li><a href="https://www.mockplus.cn/?hmsr=bdtg002&bd_vid=8362328109422378493">摩客</a></li>
+</ul>
+</li>
+<li>本地工具<ul>
+<li>Axure RP</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、第一个-Axure-RP-原型"><a href="#三、第一个-Axure-RP-原型" class="headerlink" title="三、第一个 Axure RP 原型"></a>三、第一个 Axure RP 原型</h2><h3 id="3-1-Axure-RP-安装与汉化"><a href="#3-1-Axure-RP-安装与汉化" class="headerlink" title="3.1 Axure  RP 安装与汉化"></a>3.1 Axure  RP 安装与汉化</h3><ul>
+<li>版本</li>
+</ul>
+<h3 id="3-2-Axure-RP-开发环境"><a href="#3-2-Axure-RP-开发环境" class="headerlink" title="3.2 Axure RP 开发环境"></a>3.2 Axure RP 开发环境</h3><ul>
+<li>页面</li>
+</ul>
+<h3 id="3-3-Axure-RP-使用流程"><a href="#3-3-Axure-RP-使用流程" class="headerlink" title="3.3  Axure RP 使用流程"></a>3.3  Axure RP 使用流程</h3><ul>
+<li>确定页面</li>
+<li>设置样面属性<ul>
+<li>原型目标类型<ul>
+<li>PC 网站</li>
+<li>移动端</li>
+</ul>
+</li>
+<li>页面样式</li>
+</ul>
+</li>
+<li>设计页面<ul>
+<li>通过组件实现页面布局</li>
+<li>设置样式</li>
+</ul>
+</li>
+<li>运行<ul>
+<li>查看效果</li>
+</ul>
+</li>
+<li>发布<ul>
+<li>图片</li>
+<li><strong>HTML</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="四、使用-Axure-RP-制作静态原型"><a href="#四、使用-Axure-RP-制作静态原型" class="headerlink" title="四、使用 Axure RP 制作静态原型"></a>四、使用 Axure RP 制作静态原型</h2><ul>
+<li>页面</li>
+<li>组件</li>
+<li>样式<ul>
+<li>外观</li>
+<li>布局(位置、对齐方式)</li>
+</ul>
+</li>
+</ul>
+<h2 id="五、使用Axure-RP-制作交互式原型"><a href="#五、使用Axure-RP-制作交互式原型" class="headerlink" title="五、使用Axure RP 制作交互式原型"></a>五、使用Axure RP 制作交互式原型</h2><h3 id="5-1-交互式"><a href="#5-1-交互式" class="headerlink" title="5.1 交互式"></a>5.1 交互式</h3><ul>
+<li>什么是交互式 : 根据用户操作，原型会有不同响应</li>
+</ul>
+<h3 id="5-2-实现交互要求"><a href="#5-2-实现交互要求" class="headerlink" title="5.2 实现交互要求"></a>5.2 实现交互要求</h3><ul>
+<li>添加交互(添加事件)<ul>
+<li>什么是事件 ： 当用户操作时或系统进入某个阶段，会有响应</li>
+<li>事件(交互)具备条件<ul>
+<li>事件源(触发事件的组件)</li>
+<li>事件类型<ul>
+<li>点击</li>
+<li>双击</li>
+<li>悬停</li>
+<li>…</li>
+</ul>
+</li>
+<li>事件处理程序<ul>
+<li>设置文本</li>
+<li>显示或隐藏</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>组件<ul>
+<li>动态面板<ul>
+<li>什么是动态面板： 容器,是由一个或多个State(状态)组件 , State相当一小的页面</li>
+<li>用法<ul>
+<li>添加动态面板</li>
+<li>设置面板名称</li>
+<li>操作状态(添加、删除、移动)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>母版<ul>
+<li>什么是母版: 复用元素的容器</li>
+<li>用法<ul>
+<li>添加母版(复用的元素)</li>
+<li>普通页面引用母版</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>中继器<ul>
+<li>什么是中继器： 可以模拟数据库的组件</li>
+<li>中继器基本用法<ul>
+<li>设计数据(列名必须为英文)</li>
+<li>设计行模板</li>
+<li>模板绑定数据(项加载事件)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="六、项目实战"><a href="#六、项目实战" class="headerlink" title="六、项目实战"></a>六、项目实战</h2>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Axure</tag>
+      </tags>
+  </entry>
+</search>

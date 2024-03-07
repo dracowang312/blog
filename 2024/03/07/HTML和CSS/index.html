@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"draco.wang","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="HTML5是HTML最新的修订版本，由万维网联盟（W3C）于2014年10月完成标准制定。目标是取代1999年所制定的HTML 4.01和XHTML 1.0标准，以期能在网际网路应用迅速发展的时候，使网路标准达到符合当代的网路需求。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML和CSS基础">
+<meta property="og:url" content="http://draco.wang/2024/03/07/HTML%E5%92%8CCSS/index.html">
+<meta property="og:site_name" content="Draco Wang&#39; Blog">
+<meta property="og:description" content="HTML5是HTML最新的修订版本，由万维网联盟（W3C）于2014年10月完成标准制定。目标是取代1999年所制定的HTML 4.01和XHTML 1.0标准，以期能在网际网路应用迅速发展的时候，使网路标准达到符合当代的网路需求。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-03-07T01:13:45.000Z">
+<meta property="article:modified_time" content="2024-03-07T07:38:13.505Z">
+<meta property="article:author" content="Draco Wang">
+<meta property="article:tag" content="HTML5">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://draco.wang/2024/03/07/HTML%E5%92%8CCSS/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://draco.wang/2024/03/07/HTML%E5%92%8CCSS/","path":"2024/03/07/HTML和CSS/","title":"HTML和CSS基础"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>HTML和CSS基础 | Draco Wang' Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Draco Wang' Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/home" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML%E5%92%8CCSS%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">HTML和CSS基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.1.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5"><span class="nav-number">1.1.1.</span> <span class="nav-text">写一个网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E7%9A%84%E9%80%89%E6%8B%A9%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.2.</span> <span class="nav-text">前端工具的选择与安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VScode%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">1.1.3.</span> <span class="nav-text">VScode开发者工具快捷键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5%E7%9A%84%E7%AE%80%E4%BB%8B%E5%9F%BA%E7%A1%80%E9%AA%A8%E6%9E%B6"><span class="nav-number">1.1.4.</span> <span class="nav-text">HTML5的简介基础骨架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML%E6%B3%A8%E9%87%8A"><span class="nav-number">1.1.5.</span> <span class="nav-text">HTML注释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5%E5%9F%BA%E7%A1%80%E5%85%83%E7%B4%A0"><span class="nav-number">1.2.</span> <span class="nav-text">HTML5基础元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E4%B9%8B%E6%A0%87%E9%A2%98"><span class="nav-number">1.2.1.</span> <span class="nav-text">标签之标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E4%B9%8B%E6%AE%B5%E8%90%BD-%E6%8D%A2%E8%A1%8C-%E6%B0%B4%E5%B9%B3%E7%BA%BF"><span class="nav-number">1.2.2.</span> <span class="nav-text">标签之段落_换行_水平线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E4%B9%8B%E5%9B%BE%E7%89%87"><span class="nav-number">1.2.3.</span> <span class="nav-text">标签之图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.2.4.</span> <span class="nav-text">路径详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E4%B9%8B%E8%B6%85%E6%96%87%E6%9C%AC%E9%93%BE%E6%8E%A5"><span class="nav-number">1.2.5.</span> <span class="nav-text">标签之超文本链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E4%B9%8B%E9%94%9A%E7%82%B9"><span class="nav-number">1.2.6.</span> <span class="nav-text">超链接之锚点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E4%B9%8B%E6%96%87%E6%9C%AC"><span class="nav-number">1.2.7.</span> <span class="nav-text">标签之文本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE%E4%B9%8B%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.8.</span> <span class="nav-text">列表标签之有序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE%E4%B9%8B%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.9.</span> <span class="nav-text">列表标签之无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.10.</span> <span class="nav-text">列表标签之自定义列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E4%B9%8B%E8%A1%A8%E6%A0%BC"><span class="nav-number">1.2.11.</span> <span class="nav-text">标签之表格</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Draco Wang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://draco.wang/2024/03/07/HTML%E5%92%8CCSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Draco Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Draco Wang' Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="HTML和CSS基础 | Draco Wang' Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTML和CSS基础
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-03-07 09:13:45 / 修改时间：15:38:13" itemprop="dateCreated datePublished" datetime="2024-03-07T09:13:45+08:00">2024-03-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>HTML5是HTML最新的修订版本，由万维网联盟（W3C）于2014年10月完成标准制定。目标是取代1999年所制定的HTML 4.01和XHTML 1.0标准，以期能在网际网路应用迅速发展的时候，使网路标准达到符合当代的网路需求。</p>
+<span id="more"></span>
+
+<h1 id="HTML和CSS基础"><a href="#HTML和CSS基础" class="headerlink" title="HTML和CSS基础"></a>HTML和CSS基础</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="写一个网页"><a href="#写一个网页" class="headerlink" title="写一个网页"></a>写一个网页</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;我的网页&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        hello,我的第一个网页</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="前端工具的选择与安装"><a href="#前端工具的选择与安装" class="headerlink" title="前端工具的选择与安装"></a>前端工具的选择与安装</h3><p><strong>vscode</strong></p>
+<ul>
+<li>支持多平台</li>
+<li>免费开源</li>
+</ul>
+<p><strong>HBbuilder</strong></p>
+<ul>
+<li>支持多平台</li>
+<li>免费开源</li>
+<li>专门开发uni-app</li>
+</ul>
+<p><strong>Webstrom</strong></p>
+<ul>
+<li>收费</li>
+<li>前端开发利器</li>
+<li>硬件要求高</li>
+</ul>
+<p>浏览器推荐使用Chrome；开发者工具推荐使用Vscode</p>
+<h3 id="VScode开发者工具快捷键"><a href="#VScode开发者工具快捷键" class="headerlink" title="VScode开发者工具快捷键"></a>VScode开发者工具快捷键</h3><p><strong>VSCode常用快捷键列表</strong></p>
+<ol>
+<li>代码格式化：Shift+Alt+F</li>
+<li>向上或向下移动一行：Alt+Up 或 Alt+Down</li>
+<li>快速复制一行代码：Shift+Alt+Up 或 Shift+Alt+Down</li>
+<li>快速保存：Ctrl + S</li>
+<li>快速查找：Ctrl + F</li>
+<li>快速替换：Ctrl + H</li>
+</ol>
+<h3 id="HTML5的简介基础骨架"><a href="#HTML5的简介基础骨架" class="headerlink" title="HTML5的简介基础骨架"></a>HTML5的简介基础骨架</h3><p>标签有<strong>非空标签</strong>和<strong>空标签</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>是H5的声明位于文档的最前面，处于标签之前。 他是网页必备的组成部分，避免浏览器的怪异模式。<br><strong>网页的基本结构</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><strong><code>&lt;html&gt;</code></strong><br>定义 HTML 文档，这个元素我们浏览器看到后就明白这是个HTML文档了，所以你的其它元素要包裹在它里面，标签限定了文档的开始点和结束点。<br><strong><code>&lt;head&gt;</code></strong><br>head标签用于定义文档的头部。文档的头部描述了文档的各种属性和信息，包括文档的标题、在 Web 中的位置以及和其他文档的关系等。绝大多数文档头部包含的数据都不会真正作为内容显示给读者。<br>head标签必须包含在html标签中<br><strong><code>&lt;meta&gt;</code></strong><br>meta叫元信息&#x2F;元数据标签<br>提供有关页面的元信息, 比如针对搜索引擎和更新频度的描述和关键词<br><strong>单标签</strong>,meta标签用来描述一个HTML网页文档的属性，关键词等<br><strong>属性</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>属性值</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>charset</td>
+<td>UTF-8</td>
+<td>文档字符编码</td>
+</tr>
+<tr>
+<td>name</td>
+<td>charset、http-equiv、viewport</td>
+<td>文档级元数据的名称</td>
+</tr>
+<tr>
+<td>content</td>
+<td></td>
+<td>根据name的取值设置相应的值</td>
+</tr>
+</tbody></table>
+<p><strong><code>&lt;title&gt;</code></strong></p>
+<ol>
+<li>可定义文档的标题。</li>
+<li>它显示在浏览器窗口的标题栏或状态栏上。</li>
+<li><code>&lt;title&gt; </code>标签是 <code>&lt;head&gt;</code>标签中唯一必须要求包含的东西，就是说写head一定要写title</li>
+<li><code>&lt;title&gt;</code>的增加有利于SEO优化</li>
+</ol>
+<blockquote>
+<p>SEO是搜索引擎优化的英文缩写。通过对网站内容调整，满足搜索引擎的排名需求</p>
+</blockquote>
+<p><strong><code>&lt;body&gt;</code></strong><br>body 元素定义文档的主体。<br>body 元素包含文档的所有内容（比如文本、超链接、图像、表格和列表等等。）<br>它会直接在页面中显示出来,也就是用户可以直观看到的内容<br>body 元素有且只有一个</p>
+<h3 id="HTML注释"><a href="#HTML注释" class="headerlink" title="HTML注释"></a>HTML注释</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 这是一段注释 --&gt; //浏览器不会显示</span><br></pre></td></tr></table></figure>
+
+<h2 id="HTML5基础元素"><a href="#HTML5基础元素" class="headerlink" title="HTML5基础元素"></a>HTML5基础元素</h2><h3 id="标签之标题"><a href="#标签之标题" class="headerlink" title="标签之标题"></a>标签之标题</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;一级标题&lt;/h1&gt;</span><br><span class="line">&lt;h2&gt;二级标题&lt;/h2&gt;</span><br><span class="line">&lt;h3&gt;三级标题&lt;/h3&gt;</span><br><span class="line">&lt;h4&gt;四级标题&lt;/h4&gt;</span><br><span class="line">&lt;h5&gt;五级标题&lt;/h5&gt;</span><br><span class="line">&lt;h6&gt;六级标题&lt;/h6&gt;</span><br></pre></td></tr></table></figure>
+<p>一个html文件中只能有一个h1标签，也是为了SEO</p>
+<blockquote>
+<p>快捷键<code>h$*6</code>快速生成h1-h6六个标签</p>
+</blockquote>
+<p>Vscode安装Open in Browser插件右键在浏览器打开<br><strong>正确使用标题标签</strong></p>
+<ul>
+<li>请确保将 HTML 标题标签只用于标题。</li>
+<li>不要为了让字体变粗变大而使用标题标签</li>
+<li>正确使用标题标签有益于ESO</li>
+</ul>
+<p><strong>标签的属性</strong><br>默认靠左</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">align=&quot;left | center | right&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="标签之段落-换行-水平线"><a href="#标签之段落-换行-水平线" class="headerlink" title="标签之段落_换行_水平线"></a>标签之段落_换行_水平线</h3><p><code>&lt;p&gt;&lt;/p&gt;</code>段落标签<br><code>&lt;br&gt;</code>换行标签 单标签<br><code>&lt;hr&gt;</code>水平线标签 单标签<br><strong>属性</strong><br><code>&lt;hr color=&quot;&quot; width=&quot;&quot; size=&quot;&quot; align&quot;&quot;/&gt;</code></p>
+<ul>
+<li>color：设置水平线的颜色</li>
+<li>width：设置水平线的长度</li>
+<li>size：设置水平线的高度</li>
+<li>align：设置水平线的对齐方式（默认居中），可取值left|right</li>
+</ul>
+<h3 id="标签之图片"><a href="#标签之图片" class="headerlink" title="标签之图片"></a>标签之图片</h3><p><code>&lt;img&gt;</code>标签定义 HTML 页面中的图像，&#x3D;单标签&#x3D;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;1.img&quot; alt=&quot;水果&quot; title=&quot;苹果&quot; width=&quot;10px&quot; height=&quot;&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>图床网站：imgurl.org</p>
+<p><strong>属性</strong></p>
+<ul>
+<li>src：路径（图片地址与名字）</li>
+<li>alt：规定图像的替代文本(利于SEO优化)</li>
+<li>width：规定图像的宽度</li>
+<li>height：规定图像的高度</li>
+<li>title：鼠标悬停在图片上给予提示</li>
+</ul>
+<h3 id="路径详解"><a href="#路径详解" class="headerlink" title="路径详解"></a>路径详解</h3><ul>
+<li><p>绝对路径<br>绝对路径是电脑的盘符存储与访问的具体地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;E:\itbaizhanCode\1.jpg&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>相对路径<br>两者相对关系，两者在同⼀路径下可以直接访问</p>
+<ul>
+<li>⼦级关系: &#x2F;</li>
+<li>⽗级关系: ..&#x2F;</li>
+<li>同级关系: .&#x2F;</li>
+</ul>
+</li>
+<li><p>网络路径<br>具体的⽹络地址: <a target="_blank" rel="noopener" href="http://iwenwiki.com/api/newworld/images/n1.png">http://iwenwiki.com/api/newworld/images/n1.png</a></p>
+</li>
+</ul>
+<h3 id="标签之超文本链接"><a href="#标签之超文本链接" class="headerlink" title="标签之超文本链接"></a>标签之超文本链接</h3><p>超链接描述<br>HTML使用标签<code> &lt;a&gt;</code>来设置超文本链接<br>超链接可以是一个字，一个词，或者一组词，也可以是一幅图像，您可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。</p>
+<p>超链接属性<br>在标签<code>&lt;a&gt;</code>中使用了href属性来描述链接的地址</p>
+<p>默认情况下，链接将以，以下形式出现在浏览器中：</p>
+<ul>
+<li><p>一个未访问过的链接显示为蓝色字体并带有下划线。</p>
+</li>
+<li><p>访问过的链接显示为紫色并带有下划线。</p>
+</li>
+<li><p>点击链接时，链接显示为红色并带有下划线。</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;url&quot;&gt;链接内容&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;a&gt;</code>标签里可以嵌套别的标签，比如图片</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;url&quot;&gt;&lt;img src=&quot;./1.img&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>属性</strong></p>
+<ul>
+<li>title</li>
+<li>href</li>
+<li>alt</li>
+<li>target</li>
+</ul>
+<h3 id="超链接之锚点"><a href="#超链接之锚点" class="headerlink" title="超链接之锚点"></a>超链接之锚点</h3><p>超链接可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。<br>跳转到当前文档的某个部分的形式就是“锚点”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#hello&quot;&gt;跳转到当前页&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id=&quot;hello&quot;&gt;文本信息&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="标签之文本"><a href="#标签之文本" class="headerlink" title="标签之文本"></a>标签之文本</h3><p>常用文本标签</p>
+<ul>
+<li><code>&lt;em&gt;</code> 定义着重文字</li>
+<li><code>&lt;b&gt;</code> 定义粗体文本</li>
+<li><code>&lt;i&gt;</code> 定义斜体子</li>
+<li><code>&lt;strong&gt;</code> 定义加重语气</li>
+<li><code>&lt;sub&gt;</code> 定义下标字</li>
+<li><code>&lt;sup&gt;</code> 定义上标字</li>
+<li><code>&lt;del&gt;</code> 定义删除字</li>
+<li><code>&lt;span&gt;</code> 元素没有特定的含义</li>
+</ul>
+<blockquote>
+<p>常用文本标签和段落是不同的，段落代表一段文本，而文本标签一般表示文本词汇</p>
+</blockquote>
+<h3 id="列表标签之有序列表"><a href="#列表标签之有序列表" class="headerlink" title="列表标签之有序列表"></a>列表标签之有序列表</h3><p>有序列表是一列项目，列表项目使用数字进行标记。 有序列表始于<code>&lt;ol&gt;</code>标签。每个列表项始于<code> &lt;li&gt;</code>标签。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li&gt;水果&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;蔬菜&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+
+<p>type属性<code>&lt;ol&gt;</code>的属性type 拥有的选项</p>
+<ul>
+<li>1 表示列表项目用数字标号（1,2,3…）</li>
+<li>a 表示列表项目用小写字母标号（a,b,c…）</li>
+<li>A 表示列表项目用大写字母标号（A,B,C…）</li>
+<li>i 表示列表项目用小写罗马数字标号（i,ii,iii…）</li>
+<li>I 表示列表项目用大写罗马数字标号（I,II,III…）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li type=&quot;A&quot;&gt;水果&lt;/li&gt;</span><br><span class="line">    &lt;li type=&quot;A&quot;&gt;蔬菜&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>有序标签嵌套</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">    &lt;li&gt;水果&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;蔬菜</span><br><span class="line">        &lt;ol&gt;</span><br><span class="line">            &lt;li type=&quot;A&quot;&gt;青菜&lt;/li&gt;</span><br><span class="line">            &lt;li type=&quot;A&quot;&gt;白菜&lt;/li&gt;</span><br><span class="line">            &lt;li type=&quot;A&quot;&gt;菠菜&lt;/li&gt;</span><br><span class="line">        &lt;/ol&gt;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">    &lt;li&gt;肉&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="列表标签之无序列表"><a href="#列表标签之无序列表" class="headerlink" title="列表标签之无序列表"></a>列表标签之无序列表</h3><p>无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记<br>无序列表始于 <code>&lt;ul&gt;</code> 标签。每个列表项始于<code>&lt;li&gt;</code> 标签。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;水果&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;蔬菜&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>type属性</strong></p>
+<ul>
+<li>disc 默认实心圆</li>
+<li>circle 空心圆</li>
+<li>square 小方块</li>
+<li>none 不显示</li>
+</ul>
+<blockquote>
+<p>无序标签嵌套，同有序标签</p>
+</blockquote>
+<p><strong>常见应用场景</strong></p>
+<ul>
+<li>无序标签的列表效果</li>
+<li>导航效果</li>
+</ul>
+<h3 id="列表标签之自定义列表"><a href="#列表标签之自定义列表" class="headerlink" title="列表标签之自定义列表"></a>列表标签之自定义列表</h3><p><strong>自定义列表实现</strong><br>自定义列表不仅仅是一列项目，而是项目及其注释的组合。<br>自定义列表以 <code>&lt;dl&gt;</code> 标签开始。每个自定义列表项以 <code>&lt;dt&gt;</code> 开始。每个自定义列表项的定义以 <code>&lt;dd&gt;</code> 开始。<br>自定义列表用的很少</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;dl&gt;</span><br><span class="line">  &lt;dt&gt;数字&lt;/dt&gt;</span><br><span class="line">  &lt;dd&gt;1&lt;/dd&gt;</span><br><span class="line">  &lt;dd&gt;2&lt;/dd&gt;</span><br><span class="line">  &lt;dt&gt;字母&lt;/dt&gt;</span><br><span class="line">  &lt;dd&gt;A&lt;/dd&gt;</span><br><span class="line">  &lt;dd&gt;B&lt;/dd&gt;</span><br><span class="line">&lt;/dl&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>应用场景</strong><br>在一些需要对列表进行解释的部分，可以使用自定义列表</p>
+<h3 id="标签之表格"><a href="#标签之表格" class="headerlink" title="标签之表格"></a>标签之表格</h3><p><strong>表格展示效果</strong><br>表格在数据展示方面非常简单，并且表现优秀<br><strong>表格组成与特点</strong></p>
+<blockquote>
+<p>行、列、单元格<br>单元格特点：同行等高、同列等宽。</p>
+</blockquote>
+<p><strong>表格标签</strong><br>表格<code>&lt;table&gt;</code>表示；行用<code>&lt;tr&gt;</code>表示；列（单元格）用<code>&lt;td&gt;</code>表示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;11&lt;td&gt;</span><br><span class="line">        &lt;td&gt;12&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;21&lt;td&gt;</span><br><span class="line">        &lt;td&gt;22&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;31&lt;td&gt;</span><br><span class="line">        &lt;td&gt;32&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+
+<p>要显示边框线</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;table boeder=&quot;1&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>表格的其他标签</strong></p>
+<ul>
+<li>表格名字：<code>&lt;caption&gt;</code></li>
+<li>表格头部：<code>&lt;thead&gt;</code></li>
+<li>特殊单元格：<code>&lt;th&gt;</code></li>
+<li>表格的身体：<code>&lt;tbody&gt;</code> (包裹<code>&lt;tr&gt;</code>和<code>&lt;/td&gt;</code>)</li>
+<li>表格的脚步：<code>&lt;tfoot&gt;</code> (包裹<code>&lt;tr&gt;</code>和<code>&lt;/td&gt;</code>)</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/HTML5/" rel="tag"># HTML5</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/06/%E4%BD%BF%E7%94%A8AxureRP%E5%88%B6%E4%BD%9C%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%8E%9F%E5%9E%8B/" rel="prev" title="Axure RP">
+                  <i class="fa fa-angle-left"></i> Axure RP
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Draco Wang</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
